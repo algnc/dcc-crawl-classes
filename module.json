@@ -1,0 +1,23 @@
+{
+  "name": "dcc-crawl-classes",
+  "title": "DCC Crawl! Classes",
+  "description": "Sheets for DCC Crawl! Classes in FoundryVTT!",
+  "version": "0.1.0",
+  "minimumCoreVersion": "0.6.5",
+  "compatibleCoreVersion": "0.7.5",
+  "author": "Steve Barnes & Christian Ovsenik",
+  "system": "dcc",
+  "esmodules": ["module/dcc-crawl-classes.js"],
+  "styles": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "url": "https://github.com/algnc/mcc-classes",
+  "manifest": "https://raw.githubusercontent.com/algnc/dcc-crawl-classes/main/module.json",
+  "download": "https://github.com/algnc/dcc-crawl-classes/archive/v.0.1.0.zip",
+  "license": "LICENSE.txt"
+}

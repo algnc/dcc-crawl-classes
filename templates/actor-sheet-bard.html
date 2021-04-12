@@ -1,0 +1,92 @@
+<form class="{{cssClass}}" autocomplete="off">
+ 
+    {{!-- Hidden inputs to reflect the sheet class and force standard crit range --}}
+    <input type="hidden" id="data.details.sheetClass" name="data.details.sheetClass" value="Bard" data-dtype="String"/>
+    <input type="hidden" id="data.details.critRange" name="data.details.critRange" value="20" data-dtype="Number"/>
+
+    {{!-- Sheet Header --}}
+    {{> systems/dcc/templates/actor-partial-pc-header.html }}
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="character">{{localize "DCC.Character"}}</a>
+        <a class="item" data-tab="equipment">{{localize "DCC.Equipment"}}</a>
+        <a class="item" data-tab="class">{{localize "Bard.Bard"}}</a>
+        <a class="item" data-tab="spells">{{localize "DCC.Spells"}}</a>
+        {{#if data.config.showSkills}}
+        <a class="item" data-tab="skills">{{localize "DCC.Skills"}}</a>
+        {{/if}}
+        <a class="item" data-tab="notes">{{localize "DCC.Notes"}}</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+        {{!-- Character Tab --}}
+        {{> systems/dcc/templates/actor-partial-pc-common.html }}
+
+        {{!-- Equipment Tab --}}
+        {{> systems/dcc/templates/actor-partial-pc-equipment.html }}
+
+        {{!-- Spells Tab --}}
+        {{> systems/dcc/templates/actor-partial-wizard-spells.html }}
+
+        {{!-- Skills Tab --}}
+        {{> systems/dcc/templates/actor-partial-skills.html }}
+
+        {{!-- Notes Tab --}}
+        {{> systems/dcc/templates/actor-partial-pc-notes.html }}
+
+        {{!-- Class Tab --}}
+        <div class="tab" data-group="primary" data-tab="class">
+            <h4 class="class-label">{{localize "Bard.BardAbilities"}}</h4>
+            <div class="class">
+                <div class="skills-container">
+                    <div class="split-50-50" data-skill="talentDie">
+                      <label class="skill-check rollable" for="data.skills.talentDie.die">{{localize "Bard.TalentDie"}}</label>
+                      <input type="text" id="data.skills.talentDie.die" name="data.skills.talentDie.die" value="{{data.skills.talentDie.die}}" data-dtype="String"/>
+                    </div>
+		    <div class="split-50-50" data-ability="int">
+                        <label class="spell-check rollable" for="data.class.spellCheck">{{localize "DCC.SpellCheck"}}</label>
+                        <input type="text" id="data.class.spellCheck" name="data.class.spellCheck" value="{{numberFormat data.class.spellCheck decimals=0 sign=true}}" data-dtype="String"/>
+                    </div>
+                    <div></div>
+                    <div class="wide textarea">
+                        <label for="data.class.corruption">{{localize "DCC.Corruptions"}}:</label>
+                        <label></label>
+                        {{editor content=data.class.corruption target="data.class.corruption" button=true owner=owner editable=editable}}
+                    </div>
+                  <ul class="class-note flexcol">
+                  <li>
+                    {{localize "Bard.BardicTalents"}}
+                    <ul>
+                      <li>{{localize "Bard.BardicTalentsDesc"}}</li>
+                      <ul>
+		      <li>{{localize "Bard.CallToArms"}}</li>
+		      <ul>
+		      <li>{{localize "Bard.CallToArmsDesc"}}</li>
+		      </ul>
+		      <li>{{localize "Bard.Challenge"}}</li>
+                      <ul>
+                      <li>{{localize "Bard.ChallengeDesc"}}</li>
+                      </ul>
+		      <li>{{localize "Bard.Calm"}}</li>
+                      <ul>
+                      <li>{{localize "Bard.CalmDesc"}}</li>
+                      </ul>
+                      </ul>
+                    </ul>
+                  </li>
+                  <li>
+                    {{localize "Bard.Lore"}}</li>
+                    <ul>
+                      <li>{{localize "Bard.LoreDesc"}}</li>
+                    </ul>
+                  </li>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
+

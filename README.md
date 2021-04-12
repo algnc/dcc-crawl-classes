@@ -16,4 +16,3 @@ Manifest URL: https://github.com/algnc/dcc-crawl-classes/raw/master/module.json
 ##### Maintainers
 * Christian Ovsenik (@algnc) 
 
-# dcc-crawl-classes

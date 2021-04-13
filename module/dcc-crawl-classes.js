@@ -1,6 +1,9 @@
 /* global Actors */
 
 import * as BardSheets from './actor-sheets-bard.js'
+import * as GnomeSheets from './actor-sheets-gnome.js'
+import * as PaladinSheets from './actor-sheets-paladin.js'
+import * as RangerSheets from './actor-sheets-ranger.js'
 
 /* -------------------------------------------- */
 /*  Foundry VTT Initialization                  */
@@ -11,5 +14,8 @@ Hooks.once('init', async function () {
 
   // Register sheet application classes
   Actors.registerSheet('dcc-crawl-classes-bard', BardSheets.ActorSheetBard)
+  Actors.registerSheet('dcc-crawl-classes-gnome', GnomeSheets.ActorSheetGnome)
+  Actors.registerSheet('dcc-crawl-classes-paladin', PaladinSheets.ActorSheetPaladin)
+  Actors.registerSheet('dcc-crawl-classes-ranger', RangerSheets.ActorSheetRanger)
 })
 

@@ -1,0 +1,93 @@
+<form class="{{cssClass}}" autocomplete="off">
+ 
+    {{!-- Hidden inputs to reflect the sheet class and force standard crit range --}}
+    <input type="hidden" id="data.details.sheetClass" name="data.details.sheetClass" value="Gnome" data-dtype="String"/>
+    <input type="hidden" id="data.details.critRange" name="data.details.critRange" value="20" data-dtype="Number"/>
+
+    {{!-- Sheet Header --}}
+    {{> systems/dcc/templates/actor-partial-pc-header.html }}
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="character">{{localize "DCC.Character"}}</a>
+        <a class="item" data-tab="equipment">{{localize "DCC.Equipment"}}</a>
+        <a class="item" data-tab="class">{{localize "Gnome.Gnome"}}</a>
+        <a class="item" data-tab="spells">{{localize "DCC.Spells"}}</a>
+        {{#if data.config.showSkills}}
+        <a class="item" data-tab="skills">{{localize "DCC.Skills"}}</a>
+        {{/if}}
+        <a class="item" data-tab="notes">{{localize "DCC.Notes"}}</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+        {{!-- Character Tab --}}
+        {{> systems/dcc/templates/actor-partial-pc-common.html }}
+
+        {{!-- Equipment Tab --}}
+        {{> systems/dcc/templates/actor-partial-pc-equipment.html }}
+
+        {{!-- Spells Tab --}}
+        {{> systems/dcc/templates/actor-partial-wizard-spells.html }}
+
+        {{!-- Skills Tab --}}
+        {{> systems/dcc/templates/actor-partial-skills.html }}
+
+        {{!-- Notes Tab --}}
+        {{> systems/dcc/templates/actor-partial-pc-notes.html }}
+
+        {{!-- Class Tab --}}
+        <div class="tab" data-group="primary" data-tab="class">
+            <h4 class="class-label">{{localize "Gnome.GnomeAbilities"}}</h4>
+            <div class="class">
+                <div class="skills-container">
+                    <div class="split-50-50" data-skill="trickDie">
+                      <label class="skill-check rollable" for="data.skills.trickDie.die">{{localize "Gnome.TrickDie"}}</label>
+                      <input type="text" id="data.skills.trickDie.die" name="data.skills.trickDie.die" value="{{data.skills.trickDie.die}}" data-dtype="String"/>
+                    </div>
+		    <div class="split-50-50" data-ability="int">
+                        <label class="spell-check rollable" for="data.class.spellCheck">{{localize "DCC.SpellCheck"}}</label>
+                        <input type="text" id="data.class.spellCheck" name="data.class.spellCheck" value="{{numberFormat data.class.spellCheck decimals=0 sign=true}}" data-dtype="String"/>
+                    </div>
+                    <div></div>
+                    <div class="wide textarea">
+                        <label for="data.class.corruption">{{localize "DCC.Corruptions"}}:</label>
+                        <label></label>
+                        {{editor content=data.class.corruption target="data.class.corruption" button=true owner=owner editable=editable}}
+                    </div>
+                  <ul class="class-note flexcol">
+                  <li>
+                    {{localize "Gnome.GnomeSlow"}}
+		      <ul>
+                      <li>{{localize "Gnome.GnomeSlowDesc"}}</li>
+		      </ul></li>
+		  <li> {{localize "Gnome.GnomeLevelLimit"}}
+		      <ul>
+		      <li>{{localize "Gnome.LevelLimitDesc"}}</li>
+		      </ul></li>
+		  <li>{{localize "Gnome.MagicResistance"}}</li>
+                      <ul>
+                      <li>{{localize "Gnome.MagicResistanceDesc"}}</li>
+                      </ul></li>
+		  <li>{{localize "Gnome.AnimalTrick"}}</li>
+                      <ul>
+                      <li>{{localize "Gnome.AnimalTrickDesc"}}</li>
+                      </ul></li>
+		  <li>{{localize "Gnome.NightVision"}}</li>
+		      <ul>
+		      <li>{{localize "Gnome.NightVisionDesc"}}</li>
+		      </ul></li>
+		  <li>{{localize "Gnome.GemAffinity"}}</li>
+		      <ul>
+		      <li>{{localize "Gnome.GemAffinityDesc"}}</li>
+		      </ul></li>
+		<li>{{localize "Gnome.Luck"}}</li>
+		</ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
+

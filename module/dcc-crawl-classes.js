@@ -4,6 +4,7 @@ import * as BardSheets from './actor-sheets-bard.js'
 import * as GnomeSheets from './actor-sheets-gnome.js'
 import * as PaladinSheets from './actor-sheets-paladin.js'
 import * as RangerSheets from './actor-sheets-ranger.js'
+import * as DwarvenPriestSheets from './actor-sheets-dwarven-priest.js'
 
 /* -------------------------------------------- */
 /*  Foundry VTT Initialization                  */
@@ -17,5 +18,6 @@ Hooks.once('init', async function () {
   Actors.registerSheet('dcc-crawl-classes-gnome', GnomeSheets.ActorSheetGnome)
   Actors.registerSheet('dcc-crawl-classes-paladin', PaladinSheets.ActorSheetPaladin)
   Actors.registerSheet('dcc-crawl-classes-ranger', RangerSheets.ActorSheetRanger)
+  Actors.registerSheet('dcc-crawl-classes-dwarven-priest', DwarvenPriestSheets.ActorSheetDwarvenPriest)
 })
 

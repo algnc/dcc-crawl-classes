@@ -1,0 +1,213 @@
+<form class="{{cssClass}}" autocomplete="off">
+ 
+    {{!-- Hidden inputs to reflect the sheet class and force standard crit range --}}
+    <input type="hidden" id="data.details.sheetClass" name="data.details.sheetClass" value="DwarvenPriest" data-dtype="String"/>
+    <input type="hidden" id="data.details.critRange" name="data.details.critRange" value="20" data-dtype="Number"/>
+
+    {{!-- Sheet Header --}}
+    {{> systems/dcc/templates/actor-partial-pc-header.html }}
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="character">{{localize "DCC.Character"}}</a>
+        <a class="item" data-tab="equipment">{{localize "DCC.Equipment"}}</a>
+        <a class="item" data-tab="class">{{localize "DwarvenPriest.DwarvenPriest"}}</a>
+        <a class="item" data-tab="spells">{{localize "DCC.Spells"}}</a>
+        {{#if data.config.showSkills}}
+        <a class="item" data-tab="skills">{{localize "DCC.Skills"}}</a>
+        {{/if}}
+        <a class="item" data-tab="notes">{{localize "DCC.Notes"}}</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+        {{!-- Character Tab --}}
+        {{> systems/dcc/templates/actor-partial-pc-common.html }}
+
+        {{!-- Equipment Tab --}}
+        {{> systems/dcc/templates/actor-partial-pc-equipment.html }}
+
+        {{!-- Spells Tab --}}
+        {{> systems/dcc/templates/actor-partial-cleric-spells.html }}
+
+        {{!-- Skills Tab --}}
+        {{> systems/dcc/templates/actor-partial-skills.html }}
+
+        {{!-- Notes Tab --}}
+        {{> systems/dcc/templates/actor-partial-pc-notes.html }}
+
+        {{!-- Class Tab --}}
+        <div class="tab" data-group="primary" data-tab="class">
+	    {{!-- Update spell check ability to use Personality --}}
+            <input type="hidden" id="data.class.spellCheckAbility" name="data.class.spellCheckAbility" value="per">
+            <h4 class="class-label">{{localize "DwarvenPriest.DwarvenPriestAbilities"}}</h4>
+            <div class="class">
+                <div class="skills-container">
+		    <div class="split-50-50" data-ability="per">
+                        <label class="spell-check rollable" for="data.class.spellCheck">{{localize "DCC.SpellCheck"}}</label>
+                        <input type="text" id="data.class.spellCheck" name="data.class.spellCheck" value="{{numberFormat data.class.spellCheck decimals=0 sign=true}}" data-dtype="String"/>
+                    </div>
+			<div class="disapproval-range">
+                        <label class="split-25-75 rollable" for="data.class.disapproval">{{localize "DCC.DisapprovalRange"}} 1 - </label>
+                        <input type="text" id="data.class.disapproval" name="data.class.disapproval" value="{{data.class.disapproval}}" width="96%" data-dtype="Number"/>
+                    </div>
+
+		   <div></div>
+                  <ul class="class-note flexcol">
+			<li>{{localize "DCC.UndergroundSkills"}}</li>
+                  <li>{{localize "DCC.MightyDeedsOfArms"}}</li>
+                        <ul class="class-note flexcol">
+                          {{#dccPackExists "dcc-core-book.dcc-core-journals"}}
+                            <li>{{{dccLocalizeAndEnrich "DCC.MightyDeedsLink"}}}</li>
+                          {{/dccPackExists}}
+                          {{#dccPackExists "dcc.dcc-userguide"}}
+                            <li>{{{dccLocalizeAndEnrich "DCC.MightyDeedsHowtoLink"}}}</li>
+                          {{/dccPackExists}}
+                        </ul>
+                    <li>{{localize "DCC.DivineAid"}}</li>
+		  <li>
+		    {{localize "DCC.Infravision"}}</li>
+			<ul class="class-note flexcol">
+                    {{#dccPackExists "dcc.dcc-userguide"}}</li>
+                      <li>{{{dccLocalizeAndEnrich "DCC.InfravisionLink"}}}</li>
+                    {{/dccPackExists}}
+                  </ul>
+		  <li> {{localize "DwarvenPriest.Slow"}}</li>
+		<li>{{localize "DwarvenPriest.Luck"}}</li>
+                </div>
+		<div class="lay-on-hands">
+                    <div class="lay-on-hands container">
+                      <div class="header top left item">
+                        Result
+                      </div>
+                      <div class="header top item">
+                        Same
+                      </div>
+                      <div class="header top item">
+                        Adjacent
+                      </div>
+                      <div class="header top item">
+                        Opposed
+                      </div>
+
+                      <div class="header left item">
+                        1-11
+                      </div>
+                      <div class="item">
+                        fail
+                      </div>
+                      <div class="item">
+                        fail
+                      </div>
+                      <div class="item">
+                        fail
+                      </div>
+
+                      <div class="header left item">
+                        12-13
+                      </div>
+                      <div class="item">
+                        2 dice
+                      </div>
+                      <div class="item">
+                        1 dice 
+                      </div>
+                      <div class="item">
+                        1 dice 
+                      </div>
+
+                      <div class="header left item">
+                        14-19
+                      </div>
+                      <div class="item">
+                        3 dice
+                      </div>
+                      <div class="item">
+                        2 dice
+                      </div>
+                      <div class="item">
+                        1 dice 
+                      </div>
+
+                      <div class="header left item">
+                        20-21
+                      </div>
+                      <div class="item">
+                        4 dice
+                      </div>
+                      <div class="item">
+                        3 dice
+                      </div>
+                      <div class="item">
+                        2 dice
+                      </div>
+
+                      <div class="header left item">
+                        22+
+                      </div>
+                      <div class="item">
+                        5 dice
+                      </div>
+                      <div class="item">
+                        4 dice
+</div>
+                      <div class="item">
+                        3 dice
+                      </div>
+                    </div>
+
+                    <div class="condition-healing container">
+                      <div class="header top left item">
+                        Condition
+                      </div>
+                      <div class="header top item">
+                        Dice
+                      </div>
+
+                      <div class="header left item">
+                        Broken Limbs
+                      </div>
+                      <div class="item">
+                        1
+                      </div>
+
+                      <div class="header left item">
+                        Organ Damage
+                      </div>
+                      <div class="item">
+                        2
+                      </div>
+
+                      <div class="header left item">
+                        Disease
+                      </div>
+                      <div class="item">
+                        2
+                      </div>
+
+                      <div class="header left item">
+                        Paralysis or Poison
+                      </div>
+                      <div class="item">
+                        3
+                      </div>
+<div class="header left item">
+                        Blindness or Deafness
+                      </div>
+                      <div class="item">
+                        4
+                      </div>
+                    </div>
+                </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
+

@@ -4,6 +4,9 @@
   "dcc-crawl-classes-paladin.ActorSheetPaladin": "Paladin",
   "dcc-crawl-classes-ranger.ActorSheetRanger": "Ranger",
   "dcc-crawl-classes-dwarven-priest.ActorSheetDwarvenPriest": "Dwarven Priest",
+  "dcc-crawl-classes-elven-rogue.ActorSheetElvenRogue": "Elven Rogue",
+  "dcc-crawl-classes-halfling-burglar.ActorSheetHalflingBurglar": "Halfling Burglar",
+  "dcc-crawl-classes-halfling-champion.ActorSheetHalflingChampion": "Halfling Champion",
   "Bard.TalentDie": "Talent Die",
   "Bard.BardAbilities": "Bard Abilities",
   "Bard.Bard": "Bard",
@@ -66,5 +69,13 @@
   "DwarvenPriest.DwarvenPriest": "Dwarven Priest",
   "DwarvenPriest.DwarvenPriestAbilities": "Dwarven Priest Abilities",
   "DwarvenPriest.Slow": "20' movement",
-  "DwarvenPriest.Luck": "Apply Luck bonus to AC"
+  "DwarvenPriest.Luck": "Apply Luck bonus to AC",
+  "ElvenRogue.ElvenRogue": "Elven Rogue",
+  "ElvenRogue.ElvenRogueAbilities": "Elven Rogue Abilities",
+  "ElvenRogue.Luck": "At 1st-level, an elf rogue’s Luck modifier applies to one of the rogue’s skills. That modifier does not change as the rogue’s Luck score changes.",
+  "HalflingBurglar.HalflingBurglar": "Halfling Burglar",
+  "HalflingBurglar.HalflingBurglarAbilities": "Halfling Burglar Abilities",
+  "HalflingChampion.HalflingChampion": "Halfling Champion",
+  "HalflingChampion.HalflingChampionAbilities": "Halfling Champion Abilities",
+  "HalflingChampion.InspirationalLuck": "Regular Halfling Luck rules and: out of initiative the champion may burn 1 Luck and apply their Mighty Deed of Arms die to any ally’s attack roll. The ally also gets to perform the Mighty Deed as declared by the champion." 
 }

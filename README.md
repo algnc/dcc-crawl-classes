@@ -4,7 +4,7 @@ Expands the [Dungeon Crawl Classics system](https://github.com/cyface/foundryvtt
 
 Manifest URL: https://raw.githubusercontent.com/algnc/dcc-crawl-classes/main/module.json
 
-Crawl! Magazine: http://www.straycouches.com/documents/archives/category/press
+Crawl! Magazine: http://crawlfanzine.com/
 
 ##### Classes By
 ### Crawl #6:

@@ -27,7 +27,7 @@
   "Gnome.GnomeSlow": "Slow",
   "Gnome.GnomeSlowDesc": "20' move",
   "Gnome.GnomeLevelLimit": "Level Limit",
-  "Gnome.GnomeLevelLimitDesc": "Limited to level 5", 
+  "Gnome.LevelLimitDesc": "Limited to level 5", 
   "Gnome.Luck": "A gnome’s Luck modifier applies to all Saving Throws against magic attacks and spells.",
   "Gnome.MagicResistance": "Magic Resistance",
   "Gnome.MagicResistanceDesc": "Gnomes are especially resistant to magic.",

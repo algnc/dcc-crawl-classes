@@ -2,7 +2,7 @@
   "name": "dcc-crawl-classes",
   "title": "DCC Crawl! Sheets",
   "description": "Crawl! Sheets for Dungeon Crawl Classics in FoundryVTT!",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "minimumCoreVersion": "0.6.5",
   "compatibleCoreVersion": "0.7.9",
   "author": "Steve Barnett, Christian Ovsenik",

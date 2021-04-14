@@ -77,6 +77,11 @@
 		  <li>{{localize "Gnome.NightVision"}}</li>
 		      <ul>
 		      <li>{{localize "Gnome.NightVisionDesc"}}</li>
+			<ul class="class-note flexcol">
+                                {{#dccPackExists "dcc.dcc-userguide"}}
+                                        <li>{{{dccLocalizeAndEnrich "DCC.InfravisionLink"}}}</li>
+                                {{/dccPackExists}}
+                        </ul>
 		      </ul></li>
 		  <li>{{localize "Gnome.GemAffinity"}}</li>
 		      <ul>

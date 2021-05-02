@@ -7,6 +7,9 @@ Manifest URL: https://raw.githubusercontent.com/algnc/dcc-crawl-classes/main/mod
 Crawl! Magazine: http://crawlfanzine.com/
 
 ##### Classes By
+### Crawl #5: 
+* Orc: Shane Clements, earthlightacademy.blogspot.com
+  * For the Orc, you want to put your Rage Die and Attack Bonus on the Orc tab and roll against the table at the bottom. Eventually, this will roll against a RollTable.
 ### Crawl #6:
 * Bard, Paladin: Jose Lira, Leesburg VA, Troll.Wiz@gmail.com
   * For the Paladin, you want to use Mighty Deeds for his Smite attacks. Use his static attack bonus for regular attacks. So you want two attack profiles for each weapon:

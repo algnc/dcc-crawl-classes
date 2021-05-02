@@ -8,6 +8,7 @@ import * as DwarvenPriestSheets from './actor-sheets-dwarven-priest.js'
 import * as ElvenRogueSheets from './actor-sheets-elven-rogue.js'
 import * as HalflingBurglarSheets from './actor-sheets-halfling-burglar.js'
 import * as HalflingChampionSheets from './actor-sheets-halfling-champion.js'
+import * as OrcSheets from './actor-sheets-orc.js'
 
 /* -------------------------------------------- */
 /*  Foundry VTT Initialization                  */
@@ -25,5 +26,6 @@ Hooks.once('init', async function () {
   Actors.registerSheet('dcc-crawl-classes-elven-rogue', ElvenRogueSheets.ActorSheetElvenRogue)
   Actors.registerSheet('dcc-crawl-classes-halfling-burglar', HalflingBurglarSheets.ActorSheetHalflingBurglar)
   Actors.registerSheet('dcc-crawl-classes-halfling-champion', HalflingChampionSheets.ActorSheetHalflingChampion)
+  Actors.registerSheet('dcc-crawl-classes-orc', OrcSheets.ActorSheetOrc)
 })
 

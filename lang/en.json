@@ -7,6 +7,7 @@
   "dcc-crawl-classes-elven-rogue.ActorSheetElvenRogue": "Elven Rogue",
   "dcc-crawl-classes-halfling-burglar.ActorSheetHalflingBurglar": "Halfling Burglar",
   "dcc-crawl-classes-halfling-champion.ActorSheetHalflingChampion": "Halfling Champion",
+  "dcc-crawl-classes-orc.ActorSheetOrc": "Orc",
   "Bard.TalentDie": "Talent Die",
   "Bard.BardAbilities": "Bard Abilities",
   "Bard.Bard": "Bard",
@@ -77,5 +78,17 @@
   "HalflingBurglar.HalflingBurglarAbilities": "Halfling Burglar Abilities",
   "HalflingChampion.HalflingChampion": "Halfling Champion",
   "HalflingChampion.HalflingChampionAbilities": "Halfling Champion Abilities",
-  "HalflingChampion.InspirationalLuck": "Regular Halfling Luck rules and: out of initiative the champion may burn 1 Luck and apply their Mighty Deed of Arms die to any ally’s attack roll. The ally also gets to perform the Mighty Deed as declared by the champion." 
+  "HalflingChampion.InspirationalLuck": "Regular Halfling Luck rules and: out of initiative the champion may burn 1 Luck and apply their Mighty Deed of Arms die to any ally’s attack roll. The ally also gets to perform the Mighty Deed as declared by the champion.",
+  "Orc.Orc": "Orc",
+  "Orc.OrcAbilities": "Orc Abilities",
+  "Orc.RageDie": "Rage Die",
+  "Orc.Rage": "Rage",
+  "Orc.RageDesc": "An Orc may enter a rage at any time. To determine the extent of the bonuses, the player rolls their rage die modified by their attack bonus. A rage lasts for a number of rounds equal to the result. The bonus for attack and damage adds to, not replaces, an Orcs natural attack bonus.",
+  "Orc.NaturalWeapons": "Natural Weapons",
+  "Orc.NaturalWeaponsDesc": "All Orcs are born with large, jagged tusks. They possess a natural gore attack that deals 1d4 damage.",
+  "Orc.Initiative": "Initiative",
+  "Orc.InitiativeDesc": "While wielding two-handed weapons, they roll 1d20 for initiative instead of the usual 1d16 for two-handed weapons.",
+  "Orc.Intimidating": "Intimidating",
+  "Orc.IntimidatingDesc": "All Orcs add their level to intimidation checks.",
+  "Orc.RageTable": "Table: Raging Orcs"
 }

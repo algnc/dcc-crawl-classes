@@ -90,5 +90,6 @@
   "Orc.InitiativeDesc": "While wielding two-handed weapons, they roll 1d20 for initiative instead of the usual 1d16 for two-handed weapons.",
   "Orc.Intimidating": "Intimidating",
   "Orc.IntimidatingDesc": "All Orcs add their level to intimidation checks.",
-  "Orc.RageTable": "Table: Raging Orcs"
+  "Orc.RageTable": "Table: Raging Orcs",
+  "Orc.rageDie": "Rage Die"
 }

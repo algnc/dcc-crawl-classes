@@ -33,7 +33,7 @@ class ActorSheetDwarvenPriest extends DCCActorSheet {
     }
     if (data.data.details.sheetClass !== 'DwarvenPriest') {
       this.actor.update({
-        'data.config.attackBonusRollMode': 'Manual',	
+        'data.config.attackBonusMode': 'manual',	
        })
     }
     return data

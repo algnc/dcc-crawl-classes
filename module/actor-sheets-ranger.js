@@ -16,7 +16,7 @@ class ActorSheetRanger extends DCCActorSheet {
     data.data.class.className = 'Ranger'
     if (data.data.details.sheetClass !== 'Ranger') {
       this.actor.update({
-	'data.config.rollAttackBonus': 'True',
+	 'data.config.attackBonusRollMode': 'Manual',
        })
     }
     if (data.data.skills.climb) {

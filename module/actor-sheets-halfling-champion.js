@@ -16,7 +16,7 @@ class ActorSheetHalflingChampion extends DCCActorSheet {
     data.data.class.className ='Halfling Champion'
         if (data.data.details.sheetClass !== 'HalflingChampion') {
       this.actor.update({
-        'data.config.rollAttackBonus': 'True',
+        'data.config.attackBonusRollMode': 'Manual', 
        })
     }
 

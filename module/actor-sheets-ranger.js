@@ -23,7 +23,6 @@ class ActorSheetRanger extends DCCActorSheet {
       this.actor.update({
 	'data.skills.climb': {
 	  label: 'Ranger.Climb',
-	  value: ''
       }
     })
     }
@@ -31,7 +30,6 @@ class ActorSheetRanger extends DCCActorSheet {
       this.actor.update({
         'data.skills.findTrap': {
           label: 'Ranger.findTrap',
-	  value: ''
       }
     })
     }
@@ -39,7 +37,6 @@ class ActorSheetRanger extends DCCActorSheet {
       this.actor.update({
         'data.skills.sneak': {
           label: 'Ranger.Sneak',
-	  value: ''
       }
     }) 
     }
@@ -47,7 +44,6 @@ class ActorSheetRanger extends DCCActorSheet {
       this.actor.update({
         'data.skills.strider': {
           label: 'Ranger.Strider',
-	  value: ''
       }
     }) 
     }
@@ -55,7 +51,6 @@ class ActorSheetRanger extends DCCActorSheet {
       this.actor.update({
         'data.skills.survival': {
           label: 'Ranger.Survival',
-	  value: ''
       }
     })
     }

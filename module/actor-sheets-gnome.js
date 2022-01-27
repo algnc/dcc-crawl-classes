@@ -13,7 +13,12 @@ class ActorSheetGnome extends DCCActorSheet {
   getData () {
     const data = super.getData()
     this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-gnome.html'
-    data.data.class.className = 'Gnome'
+    if (data.data.details.sheetClass !== 'Gnome') {
+      this.actor.update({
+        'data.class.className': game.i18n.localize('gnome.Gnome')
+      })
+    }
+
 
     // Add in Gnome specific data if missing
     if (!data.data.skills.trickDie) {

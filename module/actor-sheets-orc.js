@@ -13,7 +13,12 @@ class ActorSheetOrc extends DCCActorSheet {
   getData () {
     const data = super.getData()
     this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-orc.html'
-    data.data.class.className = 'Orc'
+	  if (data.data.details.sheetClass !== 'Orc') {
+      this.actor.update({
+        'data.class.className': game.i18n.localize('orc.Orc')
+      })
+    }
+
 	if (data.data.details.sheetClass !== 'Orc') {
       this.actor.update({
 	'data.skills.rageDie': {

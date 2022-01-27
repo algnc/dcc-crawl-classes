@@ -13,7 +13,11 @@ class ActorSheetBard extends DCCActorSheet {
   getData () {
     const data = super.getData()
     this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-bard.html'
-    data.data.class.className = 'Bard'
+    if (data.data.details.sheetClass !== 'Bard') {
+      this.actor.update({
+        'data.class.className': game.i18n.localize('Bard.Bard')
+      })
+    }
 
     // Add in Bard specific data if missing
     if (!data.data.skills.talentDie) {

@@ -13,7 +13,11 @@ class ActorSheetHalflingChampion extends DCCActorSheet {
   getData () {
     const data = super.getData()
     this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-halfling-champion.html'
-    data.data.class.className ='Halfling Champion'
+    if (data.data.details.sheetClass !== 'Halfling-Champion') {
+      this.actor.update({
+        'data.class.className': game.i18n.localize('HalflingChampion.HalflingChampion')
+      })
+    }
         if (data.data.details.sheetClass !== 'HalflingChampion') {
       this.actor.update({
         'data.config.attackBonusMode': 'manual', 

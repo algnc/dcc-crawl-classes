@@ -13,7 +13,11 @@ class ActorSheetHalflingBurglar extends DCCActorSheet {
   getData () {
     const data = super.getData()
     this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-halfling-burglar.html'
-    data.data.class.className ='Halfling Burglar'
+    if (data.data.details.sheetClass !== 'Halfling-Burglar') {
+      this.actor.update({
+        'data.class.className': game.i18n.localize('HalflingBurglar.HalflingBurglar')
+      })
+    }
     return data
   }
 }

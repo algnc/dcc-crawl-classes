@@ -13,7 +13,12 @@ class ActorSheetElvenRogue extends DCCActorSheet {
   getData () {
     const data = super.getData()
     this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-elven-rogue.html'
-    data.data.class.className = 'Elven Rogue'
+    if (data.data.details.sheetClass !== 'Elven-Rogue') {
+      this.actor.update({
+        'data.class.className': game.i18n.localize('ElvenRogue.ElvenRogue')
+      })
+    }
+	  
     return data
   }
 }

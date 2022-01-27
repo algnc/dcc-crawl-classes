@@ -13,7 +13,12 @@ class ActorSheetRanger extends DCCActorSheet {
   getData () {
     const data = super.getData()
     this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-ranger.html'
-    data.data.class.className = 'Ranger'
+	  if (data.data.details.sheetClass !== 'Ranger') {
+      this.actor.update({
+        'data.class.className': game.i18n.localize('ranger.Ranger')
+      })
+    }
+
     if (data.data.details.sheetClass !== 'Ranger') {
       this.actor.update({
 	 'data.config.attackBonusMode': 'manual',

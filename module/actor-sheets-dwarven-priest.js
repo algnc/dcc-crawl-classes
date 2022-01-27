@@ -13,8 +13,11 @@ class ActorSheetDwarvenPriest extends DCCActorSheet {
   getData () {
     const data = super.getData()
     this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-dwarven-priest.html'
-    data.data.class.className = 'Dwarven Priest'
-
+    if (data.data.details.sheetClass !== 'Dwarven-Priest') {
+      this.actor.update({
+        'data.class.className': game.i18n.localize('DwarvenPriest.DwarvenPriest')
+      })
+    }
     // Add in DwarvenPriest specific data if missing
     if (!data.data.skills.deedDie) {
       this.actor.update({

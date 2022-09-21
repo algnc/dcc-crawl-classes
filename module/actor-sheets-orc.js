@@ -10,16 +10,16 @@ import DCCActorSheet from '/systems/dcc/module/actor-sheet.js'
  */
 class ActorSheetOrc extends DCCActorSheet {
   /** @override */
-  getData () {
-    const data = super.getData()
+	async getData (options) {
+    const data = await super.getData(options)
     this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-orc.html'
-	  if (data.data.details.sheetClass !== 'Orc') {
+	  if (data.system.details.sheetClass !== 'Orc') {
       this.actor.update({
         'data.class.className': game.i18n.localize('orc.Orc')
       })
     }
 
-	if (data.data.details.sheetClass !== 'Orc') {
+	if (data.system.details.sheetClass !== 'Orc') {
       this.actor.update({
 	'data.skills.rageDie': {
 	  label: 'Orc.rageDie',

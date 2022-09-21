@@ -10,10 +10,10 @@ import DCCActorSheet from '/systems/dcc/module/actor-sheet.js'
  */
 class ActorSheetPaladin extends DCCActorSheet {
   /** @override */
-  getData () {
-    const data = super.getData()
+	async getData (options) {
+    const data = await super.getData(options)
     this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-paladin.html'
-	  if (data.data.details.sheetClass !== 'Paladin') {
+	  if (data.system.details.sheetClass !== 'Paladin') {
       this.actor.update({
         'data.class.className': game.i18n.localize('paladin.Paladin')
       })
@@ -21,7 +21,7 @@ class ActorSheetPaladin extends DCCActorSheet {
 
 
     // Add in Paladin specific data if missing
-    if (!data.data.skills.smiteDie) {
+    if (!data.system.skills.smiteDie) {
       this.actor.update({
         'data.skills.smiteDie': {
           label: 'Paladin.SmiteDie',
@@ -29,7 +29,7 @@ class ActorSheetPaladin extends DCCActorSheet {
         }
       })
     }
-    if (!data.data.skills.holyDeeds) {
+    if (!data.system.skills.holyDeeds) {
       this.actor.update({
 	'data.skills.holyDeeds': {
 	   label: 'Paladin.HolyDeeds',
@@ -37,14 +37,14 @@ class ActorSheetPaladin extends DCCActorSheet {
  	}
       })
      }
-    if (data.data.details.sheetClass !== 'Paladin') {
+    if (data.system.details.sheetClass !== 'Paladin') {
       this.actor.update({
         'data.details.sheetClass': 'Paladin',
         'data.class.spellCheckAbility': 'per',
         'data.details.critRange': 20
       })
     }
-    if (data.data.details.sheetClass !== 'Paladin') {
+    if (data.system.details.sheetClass !== 'Paladin') {
       this.actor.update({
 	'data.config.rollAttackBonus': 'True',
        })

@@ -10,15 +10,15 @@ import DCCActorSheet from '/systems/dcc/module/actor-sheet.js'
  */
 class ActorSheetHalflingChampion extends DCCActorSheet {
   /** @override */
-  getData () {
-    const data = super.getData()
+	async getData (options) {
+    const data = await super.getData(options)
     this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-halfling-champion.html'
-    if (data.data.details.sheetClass !== 'Halfling-Champion') {
+    if (data.system.details.sheetClass !== 'Halfling-Champion') {
       this.actor.update({
         'data.class.className': game.i18n.localize('HalflingChampion.HalflingChampion')
       })
     }
-        if (data.data.details.sheetClass !== 'HalflingChampion') {
+        if (data.system.details.sheetClass !== 'HalflingChampion') {
       this.actor.update({
         'data.config.attackBonusMode': 'manual', 
        })

@@ -10,16 +10,16 @@ import DCCActorSheet from '/systems/dcc/module/actor-sheet.js'
  */
 class ActorSheetDwarvenPriest extends DCCActorSheet {
   /** @override */
-  getData () {
-    const data = super.getData()
+	async getData (options) {
+    const data = await super.getData(options)
     this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-dwarven-priest.html'
-    if (data.data.details.sheetClass !== 'Dwarven-Priest') {
+    if (data.system.details.sheetClass !== 'Dwarven-Priest') {
       this.actor.update({
-        'data.class.className': game.i18n.localize('DwarvenPriest.DwarvenPriest')
+        'data.system.class.className': game.i18n.localize('DwarvenPriest.DwarvenPriest')
       })
     }
     // Add in DwarvenPriest specific data if missing
-    if (!data.data.skills.deedDie) {
+    if (!data.system.skills.deedDie) {
       this.actor.update({
         'data.skills.deedDie': {
           label: 'DwarvenPriest.DeedDie',
@@ -27,14 +27,14 @@ class ActorSheetDwarvenPriest extends DCCActorSheet {
         }
       })
     }
-    if (data.data.details.sheetClass !== 'DwarvenPriest') {
+    if (data.system.details.sheetClass !== 'DwarvenPriest') {
       this.actor.update({
         'data.details.sheetClass': 'Dwarven Priest',
         'data.class.spellCheckAbility': 'per',
         'data.details.critRange': 20
       })
     }
-    if (data.data.details.sheetClass !== 'DwarvenPriest') {
+    if (data.system.details.sheetClass !== 'DwarvenPriest') {
       this.actor.update({
         'data.config.attackBonusMode': 'manual',	
        })

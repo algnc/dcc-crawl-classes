@@ -43,18 +43,18 @@
             <div class="class">
                 <div class="skills-container">
                     <div class="split-50-50" data-skill="talentDie">
-                      <label class="skill-check rollable" for="data.skills.talentDie.die">{{localize "Bard.TalentDie"}}</label>
-                      <input type="text" id="data.skills.talentDie.die" name="data.skills.talentDie.die" value="{{data.skills.talentDie.die}}" data-dtype="String"/>
+                      <label class="skill-check rollable" for="system.skills.talentDie.die">{{localize "Bard.TalentDie"}}</label>
+                      <input type="text" id="system.skills.talentDie.die" name="system.skills.talentDie.die" value="{{system.skills.talentDie.die}}" data-dtype="String"/>
                     </div>
 		    <div class="split-50-50" data-ability="int">
-                        <label class="spell-check rollable" for="data.class.spellCheck">{{localize "DCC.SpellCheck"}}</label>
-                        <input type="text" id="data.class.spellCheck" name="data.class.spellCheck" value="{{numberFormat data.class.spellCheck decimals=0 sign=true}}" data-dtype="String"/>
+                        <label class="spell-check rollable" for="system.class.spellCheck">{{localize "DCC.SpellCheck"}}</label>
+                        <input type="text" id="system.class.spellCheck" name="system.class.spellCheck" value="{{numberFormat system.class.spellCheck decimals=0 sign=true}}" data-dtype="String"/>
                     </div>
                     <div></div>
                     <div class="wide textarea">
-                        <label for="data.class.corruption">{{localize "DCC.Corruptions"}}:</label>
+                        <label for="system.class.corruption">{{localize "DCC.Corruptions"}}:</label>
                         <label></label>
-                        {{editor content=data.class.corruption target="data.class.corruption" button=true owner=owner editable=editable}}
+                        {{editor content=system.class.corruption target="system.class.corruption" button=true owner=owner editable=editable}}
                     </div>
                   <ul class="class-note flexcol">
                   <li>

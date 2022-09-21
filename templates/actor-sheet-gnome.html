@@ -1,8 +1,8 @@
 <form class="{{cssClass}}" autocomplete="off">
  
     {{!-- Hidden inputs to reflect the sheet class and force standard crit range --}}
-    <input type="hidden" id="data.details.sheetClass" name="data.details.sheetClass" value="Gnome" data-dtype="String"/>
-    <input type="hidden" id="data.details.critRange" name="data.details.critRange" value="20" data-dtype="Number"/>
+    <input type="hidden" id="system.details.sheetClass" name="system.details.sheetClass" value="Gnome" data-dtype="String"/>
+    <input type="hidden" id="system.details.critRange" name="system.details.critRange" value="20" data-dtype="Number"/>
 
     {{!-- Sheet Header --}}
     {{> systems/dcc/templates/actor-partial-pc-header.html }}
@@ -43,18 +43,18 @@
             <div class="class">
                 <div class="skills-container">
                     <div class="split-50-50" data-skill="trickDie">
-                      <label class="skill-check rollable" for="data.skills.trickDie.die">{{localize "Gnome.TrickDie"}}</label>
-                      <input type="text" id="data.skills.trickDie.die" name="data.skills.trickDie.die" value="{{data.skills.trickDie.die}}" data-dtype="String"/>
+                      <label class="skill-check rollable" for="system.skills.trickDie.die">{{localize "Gnome.TrickDie"}}</label>
+                      <input type="text" id="system.skills.trickDie.die" name="system.skills.trickDie.die" value="{{system.skills.trickDie.die}}" data-dtype="String"/>
                     </div>
 		    <div class="split-50-50" data-ability="int">
                         <label class="spell-check rollable" for="data.class.spellCheck">{{localize "DCC.SpellCheck"}}</label>
-                        <input type="text" id="data.class.spellCheck" name="data.class.spellCheck" value="{{numberFormat data.class.spellCheck decimals=0 sign=true}}" data-dtype="String"/>
+                        <input type="text" id="system.class.spellCheck" name="system.class.spellCheck" value="{{numberFormat system.class.spellCheck decimals=0 sign=true}}" data-dtype="String"/>
                     </div>
                     <div></div>
                     <div class="wide textarea">
-                        <label for="data.class.corruption">{{localize "DCC.Corruptions"}}:</label>
+                        <label for="system.class.corruption">{{localize "DCC.Corruptions"}}:</label>
                         <label></label>
-                        {{editor content=data.class.corruption target="data.class.corruption" button=true owner=owner editable=editable}}
+                        {{editor content=system.class.corruption target="system.class.corruption" button=true owner=owner editable=editable}}
                     </div>
                   <ul class="class-note flexcol">
                   <li>

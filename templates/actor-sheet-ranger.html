@@ -1,8 +1,8 @@
 <form class="{{cssClass}}" autocomplete="off">
  
     {{!-- Hidden inputs to reflect the sheet class and force standard crit range --}}
-    <input type="hidden" id="data.details.sheetClass" name="data.details.sheetClass" value="Ranger" data-dtype="String"/>
-    <input type="hidden" id="data.details.critRange" name="data.details.critRange" value="20" data-dtype="Number"/>
+    <input type="hidden" id="system.details.sheetClass" name="system.details.sheetClass" value="Ranger" data-dtype="String"/>
+    <input type="hidden" id="system.details.critRange" name="system.details.critRange" value="20" data-dtype="Number"/>
 
     {{!-- Sheet Header --}}
     {{> systems/dcc/templates/actor-partial-pc-header.html }}
@@ -45,30 +45,30 @@
             <div class="class">
                 <div class="skills-container">
 		     <div class="split-50-50" data-skill="climb">
-                      <label class="skill-check rollable" for="data.skills.climb.value">{{localize "Ranger.Climb"}}</label>
-                      <input type="text" id="data.skills.climb.value" name="data.skills.climb.value" value="{{data.skills.climb.value}}" data-dtype="String"/>
+                      <label class="skill-check rollable" for="system.skills.climb.value">{{localize "Ranger.Climb"}}</label>
+                      <input type="text" id="system.skills.climb.value" name="system.skills.climb.value" value="{{system.skills.climb.value}}" data-dtype="String"/>
 		</div>
                      <div class="split-50-50" data-skill="findTrap">
-                      <label class="skill-check rollable" for="data.skills.findTrap.value">{{localize "Ranger.FindTrap"}}</label>
-                      <input type="text" id="data.skills.findTrap.value" name="data.skills.findTrap.value" value="{{data.skills.findTrap.value}}" data-dtype="String"/>
+                      <label class="skill-check rollable" for="system.skills.findTrap.value">{{localize "Ranger.FindTrap"}}</label>
+		      <input type="text" id="system.skills.findTrap.value" name="system.skills.findTrap.value" value="{{system.skills.findTrap.value}}" data-dtype="String"/>
 		</div>
                      <div class="split-50-50" data-skill="sneak">
-                      <label class="skill-check rollable" for="data.skills.sneak.value">{{localize "Ranger.Sneak"}}</label>
-                      <input type="text" id="data.skills.sneak.value" name="data.skills.sneak.value" value="{{data.skills.sneak.value}}" data-dtype="String"/>
+                      <label class="skill-check rollable" for="system.skills.sneak.value">{{localize "Ranger.Sneak"}}</label>
+                      <input type="text" id="system.skills.sneak.value" name="system.skills.sneak.value" value="{{system.skills.sneak.value}}" data-dtype="String"/>
 		</div>
                      <div class="split-50-50" data-skill="strider">
-                      <label class="skill-check rollable" for="data.skills.strider.value">{{localize "Ranger.Strider"}}</label>
-                      <input type="text" id="data.skills.strider.value" name="data.skills.strider.value" value="{{data.skills.strider.value}}" data-dtype="String"/>
+                      <label class="skill-check rollable" for="system.skills.strider.value">{{localize "Ranger.Strider"}}</label>
+                      <input type="text" id="system.skills.strider.value" name="system.skills.strider.value" value="{{system.skills.strider.value}}" data-dtype="String"/>
 		</div>
                      <div class="split-50-50" data-skill="survival">
-                      <label class="skill-check rollable" for="data.skills.survival.value">{{localize "Ranger.Survival"}}</label>
-                      <input type="text" id="data.skills.survival.value" name="data.skills.survival.value" value="{{data.skills.survival.value}}" data-dtype="String"/>
+                      <label class="skill-check rollable" for="system.skills.survival.value">{{localize "Ranger.Survival"}}</label>
+                      <input type="text" id="system.skills.survival.value" name="system.skills.survival.value" value="{{system.skills.survival.value}}" data-dtype="String"/>
 		</div>
                 <div></div>
 		 <div class="wide textarea">
-                        <label for="data.class.favoredEnemies">{{localize "Ranger.FavoredEnemies"}}:</label>
+                        <label for="system.class.favoredEnemies">{{localize "Ranger.FavoredEnemies"}}:</label>
                         <label></label>
-                        {{editor content=data.class.favoredEnemies target="data.class.favoredEnemies" button=true owner=owner editable=editable}}
+                        {{editor content=system.class.favoredEnemies target="system.class.favoredEnemies" button=true owner=owner editable=editable}}
                     </div>
 
                   <ul class="class-note flexcol">

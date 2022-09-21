@@ -10,19 +10,22 @@ import DCCActorSheet from '/systems/dcc/module/actor-sheet.js'
  */
 class ActorSheetBard extends DCCActorSheet {
   /** @override */
-  getData () {
-    const data = super.getData()
+	/**  getData () {
+		#const data = super.getData()*/
+		async getData (options) {
+    const data = await super.getData(options)
     this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-bard.html'
-    if (data.data.details.sheetClass !== 'Bard') {
+    data.system.class.className = game.i18n.localize('Bard.Bard')
+    if (data.system.details.sheetClass !== 'Bard') {
       this.actor.update({
         'data.class.className': game.i18n.localize('Bard.Bard')
       })
     }
 
     // Add in Bard specific data if missing
-    if (!data.data.skills.talentDie) {
+    if (!data.system.skills.talentDie) {
       this.actor.update({
-        'data.skills.talentDie': {
+        'data.system.skills.talentDie': {
           label: 'Bard.TalentDie',
           die: '1d14'
         }

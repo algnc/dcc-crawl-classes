@@ -10,10 +10,10 @@ import DCCActorSheet from '/systems/dcc/module/actor-sheet.js'
  */
 class ActorSheetHalflingBurglar extends DCCActorSheet {
   /** @override */
-  getData () {
-    const data = super.getData()
+	async getData (options) {
+    const data = await super.getData(options)
     this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-halfling-burglar.html'
-    if (data.data.details.sheetClass !== 'Halfling-Burglar') {
+    if (data.system.details.sheetClass !== 'Halfling-Burglar') {
       this.actor.update({
         'data.class.className': game.i18n.localize('HalflingBurglar.HalflingBurglar')
       })

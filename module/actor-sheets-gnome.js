@@ -15,7 +15,7 @@ class ActorSheetGnome extends DCCActorSheet {
     this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-gnome.html'
     if (data.system.details.sheetClass !== 'Gnome') {
       this.actor.update({
-        'data.class.className': game.i18n.localize('gnome.Gnome')
+        'system.class.className': game.i18n.localize('gnome.Gnome')
       })
     }
 
@@ -23,7 +23,7 @@ class ActorSheetGnome extends DCCActorSheet {
     // Add in Gnome specific data if missing
     if (!data.system.skills.trickDie) {
       this.actor.update({
-        'data.skills.trickDie': {
+        'system.skills.trickDie': {
           label: 'Gnome.TrickDie',
           die: 'd3'
         }

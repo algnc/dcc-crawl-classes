@@ -15,7 +15,7 @@ class ActorSheetHalflingBurglar extends DCCActorSheet {
     this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-halfling-burglar.html'
     if (data.system.details.sheetClass !== 'Halfling-Burglar') {
       this.actor.update({
-        'data.class.className': game.i18n.localize('HalflingBurglar.HalflingBurglar')
+        'system.class.className': game.i18n.localize('HalflingBurglar.HalflingBurglar')
       })
     }
     return data

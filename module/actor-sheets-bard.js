@@ -18,14 +18,14 @@ class ActorSheetBard extends DCCActorSheet {
     data.system.class.className = game.i18n.localize('Bard.Bard')
     if (data.system.details.sheetClass !== 'Bard') {
       this.actor.update({
-        'data.class.className': game.i18n.localize('Bard.Bard')
+        'system.class.className': game.i18n.localize('Bard.Bard')
       })
     }
 
     // Add in Bard specific data if missing
     if (!data.system.skills.talentDie) {
       this.actor.update({
-        'data.system.skills.talentDie': {
+        'system.system.skills.talentDie': {
           label: 'Bard.TalentDie',
           die: '1d14'
         }

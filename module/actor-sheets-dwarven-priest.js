@@ -15,13 +15,13 @@ class ActorSheetDwarvenPriest extends DCCActorSheet {
     this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-dwarven-priest.html'
     if (data.system.details.sheetClass !== 'Dwarven-Priest') {
       this.actor.update({
-        'data.system.class.className': game.i18n.localize('DwarvenPriest.DwarvenPriest')
+        'system.system.class.className': game.i18n.localize('DwarvenPriest.DwarvenPriest')
       })
     }
     // Add in DwarvenPriest specific data if missing
     if (!data.system.skills.deedDie) {
       this.actor.update({
-        'data.skills.deedDie': {
+        'system.skills.deedDie': {
           label: 'DwarvenPriest.DeedDie',
           die: ''
         }
@@ -29,14 +29,14 @@ class ActorSheetDwarvenPriest extends DCCActorSheet {
     }
     if (data.system.details.sheetClass !== 'DwarvenPriest') {
       this.actor.update({
-        'data.details.sheetClass': 'Dwarven Priest',
-        'data.class.spellCheckAbility': 'per',
-        'data.details.critRange': 20
+        'system.details.sheetClass': 'Dwarven Priest',
+        'system.class.spellCheckAbility': 'per',
+        'system.details.critRange': 20
       })
     }
     if (data.system.details.sheetClass !== 'DwarvenPriest') {
       this.actor.update({
-        'data.config.attackBonusMode': 'manual',	
+        'system.config.attackBonusMode': 'manual',	
        })
     }
     return data

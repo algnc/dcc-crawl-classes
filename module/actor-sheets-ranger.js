@@ -15,53 +15,53 @@ class ActorSheetRanger extends DCCActorSheet {
     this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-ranger.html'
 	  if (data.system.details.sheetClass !== 'Ranger') {
       this.actor.update({
-        'data.class.className': game.i18n.localize('ranger.Ranger')
+        'system.class.className': game.i18n.localize('ranger.Ranger')
       })
     }
 
     if (data.system.details.sheetClass !== 'Ranger') {
       this.actor.update({
-	 'data.config.attackBonusMode': 'manual',
+	 'system.config.attackBonusMode': 'manual',
        })
     }
     if (data.system.skills.climb) {
       this.actor.update({
-	'data.skills.climb': {
+	'system.skills.climb': {
 	  label: 'Ranger.Climb',
       }
     })
     }
     if (data.system.skills.FindTrap) {
       this.actor.update({
-        'data.skills.findTrap': {
+        'system.skills.findTrap': {
           label: 'Ranger.findTrap',
       }
     })
     }
     if (data.system.skills.sneak) {
       this.actor.update({
-        'data.skills.sneak': {
+        'system.skills.sneak': {
           label: 'Ranger.Sneak',
       }
     }) 
     }
     if (data.system.skills.strider) {
       this.actor.update({
-        'data.skills.strider': {
+        'system.skills.strider': {
           label: 'Ranger.Strider',
       }
     }) 
     }
     if (data.system.skills.survival) {
       this.actor.update({
-        'data.skills.survival': {
+        'system.skills.survival': {
           label: 'Ranger.Survival',
       }
     })
     }
     if (data.system.skills.favoredEnemies) {
       this.actor.update({
-	'data.skills.favoredEnemies': {
+	'system.skills.favoredEnemies': {
 	  label: 'Ranger.FavoredEnemies',
       }
     })

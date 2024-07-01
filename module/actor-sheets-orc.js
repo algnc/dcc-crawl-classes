@@ -15,13 +15,13 @@ class ActorSheetOrc extends DCCActorSheet {
     this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-orc.html'
 	  if (data.system.details.sheetClass !== 'Orc') {
       this.actor.update({
-        'system.class.className': game.i18n.localize('orc.Orc')
+        'data.class.className': game.i18n.localize('orc.Orc')
       })
     }
 
 	if (data.system.details.sheetClass !== 'Orc') {
       this.actor.update({
-	'system.skills.rageDie': {
+	'data.skills.rageDie': {
 	  label: 'Orc.rageDie',
 	  die: '1d3',
 	  value: '1'

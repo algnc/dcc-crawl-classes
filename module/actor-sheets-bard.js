@@ -15,7 +15,6 @@ class ActorSheetBard extends DCCActorSheet {
 		async getData (options) {
     const data = await super.getData(options)
     this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-bard.html'
-    data.system.class.className = game.i18n.localize('Bard.Bard')
     if (data.system.details.sheetClass !== 'Bard') {
       this.actor.update({
         'system.class.className': game.i18n.localize('Bard.Bard')

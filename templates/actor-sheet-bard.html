@@ -1,5 +1,5 @@
 <form class="{{cssClass}}" autocomplete="off">
- 
+
     {{!-- Hidden inputs to reflect the sheet class and force standard crit range --}}
     <input type="hidden" id="data.details.sheetClass" name="data.details.sheetClass" value="Bard" data-dtype="String"/>
     <input type="hidden" id="data.details.critRange" name="data.details.critRange" value="20" data-dtype="Number"/>
@@ -43,48 +43,53 @@
             <div class="class">
                 <div class="skills-container">
                     <div class="split-50-50" data-skill="talentDie">
-                      <label class="skill-check rollable" for="system.skills.talentDie.die">{{localize "Bard.TalentDie"}}</label>
-                      <input type="text" id="system.skills.talentDie.die" name="system.skills.talentDie.die" value="{{system.skills.talentDie.die}}" data-dtype="String"/>
+                        <label class="skill-check rollable" for="system.skills.talentDie.die">{{localize
+                            "Bard.TalentDie"}}</label>
+                        <input type="text" id="system.skills.talentDie.die" name="system.skills.talentDie.die"
+                               value="{{system.skills.talentDie.die}}" data-dtype="String"/>
                     </div>
-		    <div class="split-50-50" data-ability="int">
-                        <label class="spell-check rollable" for="system.class.spellCheck">{{localize "DCC.SpellCheck"}}</label>
-                        <input type="text" id="system.class.spellCheck" name="system.class.spellCheck" value="{{numberFormat system.class.spellCheck decimals=0 sign=true}}" data-dtype="String"/>
+                    <div class="split-50-50" data-ability="int">
+                        <label class="spell-check rollable" for="system.class.spellCheck">{{localize
+                            "DCC.SpellCheck"}}</label>
+                        <input type="text" id="system.class.spellCheck" name="system.class.spellCheck"
+                               value="{{numberFormat system.class.spellCheck decimals=0 sign=true}}"
+                               data-dtype="String"/>
                     </div>
                     <div></div>
                     <div class="wide textarea">
                         <label for="system.class.corruption">{{localize "DCC.Corruptions"}}:</label>
                         <label></label>
-                        {{editor content=system.class.corruption target="system.class.corruption" button=true owner=owner editable=editable}}
+                        {{editor system.class.corruption target="system.class.corruption" button=true editable=editable}}
                     </div>
-                  <ul class="class-note flexcol">
-                  <li>
-                    {{localize "Bard.BardicTalents"}}
-                    <ul>
-                      <li>{{localize "Bard.BardicTalentsDesc"}}</li>
-                      <ul>
-		      <li>{{localize "Bard.CallToArms"}}</li>
-		      <ul>
-		      <li>{{localize "Bard.CallToArmsDesc"}}</li>
-		      </ul>
-		      <li>{{localize "Bard.Challenge"}}</li>
-                      <ul>
-                      <li>{{localize "Bard.ChallengeDesc"}}</li>
-                      </ul>
-		      <li>{{localize "Bard.Calm"}}</li>
-                      <ul>
-                      <li>{{localize "Bard.CalmDesc"}}</li>
-                      </ul>
-                      </ul>
+                    <ul class="class-note flexcol">
+                        <li>
+                            {{localize "Bard.BardicTalents"}}
+                            <ul>
+                                <li>{{localize "Bard.BardicTalentsDesc"}}</li>
+                                <ul>
+                                    <li>{{localize "Bard.CallToArms"}}</li>
+                                    <ul>
+                                        <li>{{localize "Bard.CallToArmsDesc"}}</li>
+                                    </ul>
+                                    <li>{{localize "Bard.Challenge"}}</li>
+                                    <ul>
+                                        <li>{{localize "Bard.ChallengeDesc"}}</li>
+                                    </ul>
+                                    <li>{{localize "Bard.Calm"}}</li>
+                                    <ul>
+                                        <li>{{localize "Bard.CalmDesc"}}</li>
+                                    </ul>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li>
+                            {{localize "Bard.Lore"}}
+                        </li>
+                        <ul>
+                            <li>{{localize "Bard.LoreDesc"}}</li>
+                        </ul>
+                        <li>{{localize "Bard.Luck"}}</li>
                     </ul>
-                  </li>
-                  <li>
-                    {{localize "Bard.Lore"}}</li>
-                    <ul>
-                      <li>{{localize "Bard.LoreDesc"}}</li>
-                    </ul>
-                  </li>
-		  <li>{{localize "Bard.Luck"}}</li>
-                </div>
                 </div>
             </div>
         </div>

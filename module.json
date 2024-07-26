@@ -2,9 +2,10 @@
   "title": "DCC Crawl! Sheets",
   "description": "Crawl! Sheets for Dungeon Crawl Classics in FoundryVTT!",
   "version": "0.0.21",
-"minimumCoreVersion": "12",
+  "minimumCoreVersion": "12",
   "compatibleCoreVersion": "12",
-"system": ["dcc"],
+  "author": "Steve Barnett & Christian Ovsenik",
+  "system": ["dcc"],
   "esmodules": [
     "module/dcc-crawl-classes.js"
   ],
@@ -23,11 +24,5 @@
   "manifest": "https://raw.githubusercontent.com/algnc/dcc-crawl-classes/main/module.json",
   "download": "https://github.com/algnc/dcc-crawl-classes/archive/refs/heads/main.zip",
   "license": "LICENSE.txt",
-  "id": "dcc-crawl-classes",
-  "authors": [
-    {
-      "name": "Steve Barnett, Christian Ovsenik",
-      "flags": {}
-    }
-  ]
+  "id": "dcc-crawl-classes"
 }

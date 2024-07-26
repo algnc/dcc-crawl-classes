@@ -10,7 +10,7 @@ import DCCActorSheet from '/systems/dcc/module/actor-sheet.js'
  */
 class ActorSheetElvenRogue extends DCCActorSheet {
   /** @override */
-	async getData (options) {
+  async getData (options) {
     const data = await super.getData(options)
     this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-elven-rogue.html'
     if (data.system.details.sheetClass !== 'Elven-Rogue') {

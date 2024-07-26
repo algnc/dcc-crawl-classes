@@ -10,9 +10,7 @@ import DCCActorSheet from '/systems/dcc/module/actor-sheet.js'
  */
 class ActorSheetBard extends DCCActorSheet {
   /** @override */
-	/**  getData () {
-		#const data = super.getData()*/
-		async getData (options) {
+  async getData (options) {
     const data = await super.getData(options)
     this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-bard.html'
     if (data.system.details.sheetClass !== 'Bard') {

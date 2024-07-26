@@ -1,7 +1,8 @@
 <form class="{{cssClass}}" autocomplete="off">
- 
+
     {{!-- Hidden inputs to reflect the sheet class and force standard crit range --}}
-    <input type="hidden" id="system.details.sheetClass" name="system.details.sheetClass" value="Elven Rogue" data-dtype="String"/>
+    <input type="hidden" id="system.details.sheetClass" name="system.details.sheetClass" value="Elven Rogue"
+           data-dtype="String"/>
     <input type="hidden" id="system.details.critRange" name="system.details.critRange" value="20" data-dtype="Number"/>
 
     {{!-- Sheet Header --}}
@@ -43,84 +44,123 @@
             <div class="class">
                 <div class="skills-container">
                     <div class="split-50-50" data-ability="int">
-                        <label class="spell-check rollable" for="system.class.spellCheck">{{localize "DCC.SpellCheck"}}</label>
-                        <input type="text" id="system.class.spellCheck" name="system.class.spellCheck" value="{{numberFormat system.class.spellCheck decimals=0 sign=true}}" data-dtype="String"/>
+                        <label class="spell-check rollable" for="system.class.spellCheck">{{localize
+                            "DCC.SpellCheck"}}</label>
+                        <input type="text" id="system.class.spellCheck" name="system.class.spellCheck"
+                               value="{{numberFormat system.class.spellCheck decimals=0 sign=true}}"
+                               data-dtype="String"/>
                     </div>
                     <div data-skill="findSecretDoors">
-                        <label class="skill-check rollable" for="system.details.findSecretDoors.value">{{localize "DCC.HeightenedSenses"}}</label>
-                        <input type="text" id="system.skills.findSecretDoors.value" name="system.skills.findSecretDoors.value" value="{{numberFormat system.skills.findSecretDoors.value decimals=0 sign=true}}" data-dtype="String"/>
+                        <label class="skill-check rollable" for="system.skills.findSecretDoors.value">{{localize
+                            "DCC.HeightenedSenses"}}</label>
+                        <input type="text" id="system.skills.findSecretDoors.value"
+                               name="system.skills.findSecretDoors.value"
+                               value="{{numberFormat system.skills.findSecretDoors.value decimals=0 sign=true}}"
+                               data-dtype="String"/>
                     </div>
                     <div class="wide textarea">
                         <label for="system.class.corruption">{{localize "DCC.Corruptions"}}:</label>
                         <label></label>
-                        {{editor content=system.class.corruption target="system.class.corruption" button=true owner=owner editable=editable}}
+                        {{editor system.class.corruption target="system.class.corruption" button=true owner=owner
+                        editable=editable}}
                     </div>
-		   <div>
+                    <div>
                         <label class="skill-check" for="system.class.backstab">{{localize "DCC.Backstab"}}</label>
-                        <input type="text" id="system.class.backstab" name="system.class.backstab" value="{{numberFormat system.class.backstab decimals=0 sign=true}}" data-dtype="Number"/>
+                        <input type="text" id="system.class.backstab" name="system.class.backstab"
+                               value="{{numberFormat system.class.backstab decimals=0 sign=true}}" data-dtype="Number"/>
                     </div>
                     <div data-skill="sneakSilently">
-                        <label class="skill-check rollable" for="system.skills.sneakSilently.value">{{localize "DCC.SneakSilently"}}</label>
-                        <input type="text" id="system.skills.sneakSilently.value" name="system.skills.sneakSilently.value" value="{{numberFormat system.skills.sneakSilently.value decimals=0 sign=true}}" data-dtype="Number"/>
+                        <label class="skill-check rollable" for="system.skills.sneakSilently.value">{{localize
+                            "DCC.SneakSilently"}}</label>
+                        <input type="text" id="system.skills.sneakSilently.value"
+                               name="system.skills.sneakSilently.value"
+                               value="{{numberFormat system.skills.sneakSilently.value decimals=0 sign=true}}"
+                               data-dtype="Number"/>
                     </div>
                     <div data-skill="hideInShadows">
-                        <label class="skill-check rollable" for="system.skills.hideInShadows.value">{{localize "DCC.HideInShadows"}}</label>
-                        <input type="text" id="system.skills.hideInShadows.value" name="system.skills.hideInShadows.value" value="{{numberFormat system.skills.hideInShadows.value decimals=0 sign=true}}" data-dtype="Number"/>
+                        <label class="skill-check rollable" for="system.skills.hideInShadows.value">{{localize
+                            "DCC.HideInShadows"}}</label>
+                        <input type="text" id="system.skills.hideInShadows.value"
+                               name="system.skills.hideInShadows.value"
+                               value="{{numberFormat system.skills.hideInShadows.value decimals=0 sign=true}}"
+                               data-dtype="Number"/>
                     </div>
                     <div data-skill="pickPockets">
-                        <label class="skill-check rollable" for="system.skills.pickPockets.value">{{localize "DCC.PickPockets"}}</label>
-                        <input type="text" id="system.skills.pickPockets.value" name="system.skills.pickPockets.value" value="{{numberFormat system.skills.pickPockets.value decimals=0 sign=true}}" data-dtype="Number"/>
+                        <label class="skill-check rollable" for="system.skills.pickPockets.value">{{localize
+                            "DCC.PickPockets"}}</label>
+                        <input type="text" id="system.skills.pickPockets.value" name="system.skills.pickPockets.value"
+                               value="{{numberFormat system.skills.pickPockets.value decimals=0 sign=true}}"
+                               data-dtype="Number"/>
                     </div>
                     <div data-skill="climbSheerSurfaces">
-                        <label class="skill-check rollable" for="system.skills.climbSheerSurfaces.value">{{localize "DCC.ClimbSheerSurfaces"}}</label>
-                        <input type="text" id="system.skills.climbSheerSurfaces.value" name="system.skills.climbSheerSurfaces.value" value="{{numberFormat system.skills.climbSheerSurfaces.value decimals=0 sign=true}}" data-dtype="Number"/>
+                        <label class="skill-check rollable" for="system.skills.climbSheerSurfaces.value">{{localize
+                            "DCC.ClimbSheerSurfaces"}}</label>
+                        <input type="text" id="system.skills.climbSheerSurfaces.value"
+                               name="system.skills.climbSheerSurfaces.value"
+                               value="{{numberFormat system.skills.climbSheerSurfaces.value decimals=0 sign=true}}"
+                               data-dtype="Number"/>
                     </div>
                     <div data-skill="pickLock">
-                        <label class="skill-check rollable" for="system.skills.pickLock.value">{{localize "DCC.PickLock"}}</label>
-                        <input type="text" id="system.skills.pickLock.value" name="system.skills.pickLock.value" value="{{numberFormat system.skills.pickLock.value decimals=0 sign=true}}" data-dtype="Number"/>
+                        <label class="skill-check rollable" for="system.skills.pickLock.value">{{localize
+                            "DCC.PickLock"}}</label>
+                        <input type="text" id="system.skills.pickLock.value" name="system.skills.pickLock.value"
+                               value="{{numberFormat system.skills.pickLock.value decimals=0 sign=true}}"
+                               data-dtype="Number"/>
                     </div>
                     <div data-skill="findTrap">
-                        <label class="skill-check rollable" for="system.skills.findTrap.value">{{localize "DCC.FindTrap"}}</label>
- <input type="text" id="system.skills.findTrap.value" name="system.skills.findTrap.value" value="{{numberFormat system.skills.findTrap.value decimals=0 sign=true}}" data-dtype="Number"/>
+                        <label class="skill-check rollable" for="system.skills.findTrap.value">{{localize
+                            "DCC.FindTrap"}}</label>
+                        <input type="text" id="system.skills.findTrap.value" name="system.skills.findTrap.value"
+                               value="{{numberFormat system.skills.findTrap.value decimals=0 sign=true}}"
+                               data-dtype="Number"/>
                     </div>
                     <div data-skill="disableTrap">
-                        <label class="skill-check rollable" for="system.skills.disableTrap.value">{{localize "DCC.DisableTrap"}}</label>
-                        <input type="text" id="system.skills.disableTrap.value" name="system.skills.disableTrap.value" value="{{numberFormat system.skills.disableTrap.value decimals=0 sign=true}}" data-dtype="Number"/>
+                        <label class="skill-check rollable" for="system.skills.disableTrap.value">{{localize
+                            "DCC.DisableTrap"}}</label>
+                        <input type="text" id="system.skills.disableTrap.value" name="system.skills.disableTrap.value"
+                               value="{{numberFormat system.skills.disableTrap.value decimals=0 sign=true}}"
+                               data-dtype="Number"/>
                     </div>
                     <div data-skill="forgeDocument">
-                        <label class="skill-check rollable" for="system.skills.forgeDocument.value">{{localize "DCC.ForgeDocument"}}</label>
-                        <input type="text" id="system.skills.forgeDocument.value" name="system.skills.forgeDocument.value" value="{{numberFormat system.skills.forgeDocument.value decimals=0 sign=true}}" data-dtype="Number"/>
+                        <label class="skill-check rollable" for="system.skills.forgeDocument.value">{{localize
+                            "DCC.ForgeDocument"}}</label>
+                        <input type="text" id="system.skills.forgeDocument.value"
+                               name="system.skills.forgeDocument.value"
+                               value="{{numberFormat system.skills.forgeDocument.value decimals=0 sign=true}}"
+                               data-dtype="Number"/>
                     </div>
                     <div data-skill="disguiseSelf">
-                        <label class="skill-check rollable" for="system.skills.disguiseSelf.value">{{localize "DCC.DisguiseSelf"}}</label>
-                        <input type="text" id="system.skills.disguiseSelf.value" name="system.skills.disguiseSelf.value" value="{{numberFormat system.skills.disguiseSelf.value decimals=0 sign=true}}" data-dtype="Number"/>
+                        <label class="skill-check rollable" for="system.skills.disguiseSelf.value">{{localize
+                            "DCC.DisguiseSelf"}}</label>
+                        <input type="text" id="system.skills.disguiseSelf.value" name="system.skills.disguiseSelf.value"
+                               value="{{numberFormat system.skills.disguiseSelf.value decimals=0 sign=true}}"
+                               data-dtype="Number"/>
                     </div>
                     <div data-skill="readLanguages">
-                        <label class="skill-check rollable" for="system.skills.readLanguages.value">{{localize "DCC.ReadLanguages"}}</label>
-                        <input type="text" id="system.skills.readLanguages.value" name="system.skills.readLanguages.value" value="{{numberFormat system.skills.readLanguages.value decimals=0 sign=true}}" data-dtype="Number"/>
+                        <label class="skill-check rollable" for="system.skills.readLanguages.value">{{localize
+                            "DCC.ReadLanguages"}}</label>
+                        <input type="text" id="system.skills.readLanguages.value"
+                               name="system.skills.readLanguages.value"
+                               value="{{numberFormat system.skills.readLanguages.value decimals=0 sign=true}}"
+                               data-dtype="Number"/>
                     </div>
                     <div data-skill="handlePoison">
-                        <label class="skill-check rollable" for="system.skills.handlePoison.value">{{localize "DCC.HandlePoison"}}</label>
-                        <input type="text" id="system.skills.handlePoison.value" name="system.skills.handlePoison.value" value="{{numberFormat system.skills.handlePoison.value decimals=0 sign=true}}" data-dtype="Number"/>
+                        <label class="skill-check rollable" for="system.skills.handlePoison.value">{{localize
+                            "DCC.HandlePoison"}}</label>
+                        <input type="text" id="system.skills.handlePoison.value" name="system.skills.handlePoison.value"
+                               value="{{numberFormat system.skills.handlePoison.value decimals=0 sign=true}}"
+                               data-dtype="Number"/>
                     </div>
                     <div></div>
- <ul class="class-note flexcol">
-                    {{#dccPackExists "dcc-core-book.dcc-core-journals"}}
-                    <li>{{{dccLocalizeAndEnrich "DCC.ElfClassLink"}}}</li>
-                    {{/dccPackExists}}
-                    <li>{{localize "DCC.Infravision"}}</li>
-                        <ul class="class-note flexcol">
-                                {{#dccPackExists "dcc.dcc-userguide"}}
-                                        <li>{{{dccLocalizeAndEnrich "DCC.InfravisionLink"}}}</li>
-                                {{/dccPackExists}}
-                        </ul>
-                    <li>{{localize "DCC.HeightenedSensesDescription"}}</li>
-                    <li>{{localize "DCC.IronVulnerability"}}</li>
-                    <li>{{localize "ElvenRogue.Luck"}}</li>
-                </ul>
-
-
-                </div>
+                    <ul class="class-note flexcol">
+                        {{#dccPackExists "dcc-core-book.dcc-core-journals"}}
+                        <li>{{{localize "DCC.ElfClassLink"}}}</li>
+                        {{/dccPackExists}}
+                        <li>{{localize "DCC.Infravision"}}</li>
+                        <li>{{localize "DCC.HeightenedSensesDescription"}}</li>
+                        <li>{{localize "DCC.IronVulnerability"}}</li>
+                        <li>{{localize "ElvenRogue.Luck"}}</li>
+                    </ul>
                 </div>
             </div>
         </div>

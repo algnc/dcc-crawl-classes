@@ -3,12 +3,37 @@
   "description": "Crawl! Sheets for Dungeon Crawl Classics in FoundryVTT!",
   "version": "0.0.21",
   "minimumCoreVersion": "12",
-  "compatibleCoreVersion": "12",
-  "author": "Steve Barnett & Christian Ovsenik",
-  "system": ["dcc"],
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  },
+  "authors": [
+    {
+      "name": "Christian Ovsenik",
+      "email": "ceovsenik@gmail.com"
+    },
+    {
+      "name": "Steve Barnett",
+      "email": "mooped@gmail.com"
+    }
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "dcc",
+        "type": "system"
+      }
+    ]
+  },
   "esmodules": [
     "module/dcc-crawl-classes.js"
   ],
+  "flags": {
+    "hotReload": {
+      "extensions": ["js", "css", "html", "json"],
+      "paths": ["lang", "templates", "styles"]
+    }
+  },
   "styles": [
     "styles/crawl.css"
   ],

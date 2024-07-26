@@ -1,7 +1,10 @@
 {
   "title": "DCC Crawl! Sheets",
   "description": "Crawl! Sheets for Dungeon Crawl Classics in FoundryVTT!",
-  "version": "0.0.20",
+  "version": "0.0.21",
+"minimumCoreVersion": "12",
+  "compatibleCoreVersion": "12",
+"system": ["dcc"],
   "esmodules": [
     "module/dcc-crawl-classes.js"
   ],
@@ -27,7 +30,4 @@
       "flags": {}
     }
   ],
-  "compatibility": {
-    "minimum": "10"
-  }
 }

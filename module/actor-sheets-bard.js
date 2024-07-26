@@ -24,7 +24,7 @@ class ActorSheetBard extends DCCActorSheet {
     // Add in Bard specific data if missing
     if (!data.system.skills.talentDie) {
       this.actor.update({
-        'system.system.skills.talentDie': {
+        'system.skills.talentDie': {
           label: 'Bard.TalentDie',
           die: '1d14'
         }

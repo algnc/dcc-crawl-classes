@@ -18,14 +18,14 @@ Hooks.once('init', async function () {
   console.log(`Loading DCC Crawl! Classes`)
 
   // Register sheet application classes
-  Actors.registerSheet('dcc-crawl-classes-bard', BardSheets.ActorSheetBard, { types: ['Player'], label: 'bard.ActorSheetBard' })
-  Actors.registerSheet('dcc-crawl-classes-gnome', GnomeSheets.ActorSheetGnome, { types: ['Player'], label: 'gnome.ActorSheetGnome'})
-  Actors.registerSheet('dcc-crawl-classes-paladin', PaladinSheets.ActorSheetPaladin, { types: ['Player'], label: 'paladin.ActorSheetPaladin' })
-  Actors.registerSheet('dcc-crawl-classes-ranger', RangerSheets.ActorSheetRanger, { types: ['Player'], label: 'ranger.ActorSheetRanger' })
-  Actors.registerSheet('dcc-crawl-classes-dwarven-priest', DwarvenPriestSheets.ActorSheetDwarvenPriest, { types: ['Player'], label: 'dwarven-priest.ActorSheetDwarvenPriest' })
-  Actors.registerSheet('dcc-crawl-classes-elven-rogue', ElvenRogueSheets.ActorSheetElvenRogue, { types: ['Player'], label: 'elven-rogue.ActorSheetElvenRogue' })
-  Actors.registerSheet('dcc-crawl-classes-halfling-burglar', HalflingBurglarSheets.ActorSheetHalflingBurglar, { types: ['Player'], label: 'halfling-burglar.ActorSheetHalflingBurglar' })
-  Actors.registerSheet('dcc-crawl-classes-halfling-champion', HalflingChampionSheets.ActorSheetHalflingChampion, { types: ['Player'], label: 'halfling-champion.ActorSheetHalflingChampion' })
-  Actors.registerSheet('dcc-crawl-classes-orc', OrcSheets.ActorSheetOrc, { types: ['Player'], label: 'orc.ActorSheetOrc' })
+  Actors.registerSheet('dcc-crawl-classes-bard', BardSheets.ActorSheetBard, { types: ['Player'], label: 'Bard.ActorSheetBard' })
+  Actors.registerSheet('dcc-crawl-classes-gnome', GnomeSheets.ActorSheetGnome, { types: ['Player'], label: 'Gnome.ActorSheetGnome'})
+  Actors.registerSheet('dcc-crawl-classes-paladin', PaladinSheets.ActorSheetPaladin, { types: ['Player'], label: 'Paladin.ActorSheetPaladin' })
+  Actors.registerSheet('dcc-crawl-classes-ranger', RangerSheets.ActorSheetRanger, { types: ['Player'], label: 'Ranger.ActorSheetRanger' })
+  Actors.registerSheet('dcc-crawl-classes-dwarven-priest', DwarvenPriestSheets.ActorSheetDwarvenPriest, { types: ['Player'], label: 'DwarvenPriest.ActorSheetDwarvenPriest' })
+  Actors.registerSheet('dcc-crawl-classes-elven-rogue', ElvenRogueSheets.ActorSheetElvenRogue, { types: ['Player'], label: 'ElvenRogue.ActorSheetElvenRogue' })
+  Actors.registerSheet('dcc-crawl-classes-halfling-burglar', HalflingBurglarSheets.ActorSheetHalflingBurglar, { types: ['Player'], label: 'HalflingBurglar.ActorSheetHalflingBurglar' })
+  Actors.registerSheet('dcc-crawl-classes-halfling-champion', HalflingChampionSheets.ActorSheetHalflingChampion, { types: ['Player'], label: 'HalflingChampion.ActorSheetHalflingChampion' })
+  Actors.registerSheet('dcc-crawl-classes-orc', OrcSheets.ActorSheetOrc, { types: ['Player'], label: 'Orc.ActorSheetOrc' })
 })
 

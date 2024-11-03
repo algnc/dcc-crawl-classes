@@ -9,30 +9,32 @@ import DCCActorSheet from '/systems/dcc/module/actor-sheet.js'
  * @extends {DCCActorSheet}
  */
 class ActorSheetGnome extends DCCActorSheet {
-  /** @override */
-  async getData (options) {
-    const data = await super.getData(options)
-    this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-gnome.html'
-    if (data.system.details.sheetClass !== 'Gnome') {
-      this.actor.update({
-        'system.class.className': game.i18n.localize('gnome.Gnome')
-      })
-    }
+    static height = 635
 
-
-    // Add in Gnome specific data if missing
-    if (!data.system.skills.trickDie) {
-      this.actor.update({
-        'system.skills.trickDie': {
-          label: 'Gnome.TrickDie',
-          die: 'd3'
+    /** @override */
+    async getData(options) {
+        const data = await super.getData(options)
+        this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-gnome.html'
+        if (data.system.details.sheetClass !== 'Gnome') {
+            this.actor.update({
+                'system.class.className': game.i18n.localize('gnome.Gnome')
+            })
         }
-      })
+
+
+        // Add in Gnome specific data if missing
+        if (!data.system.skills.trickDie) {
+            this.actor.update({
+                'system.skills.trickDie': {
+                    label: 'Gnome.TrickDie',
+                    die: 'd3'
+                }
+            })
+        }
+        return data
     }
-    return data
-  }
 }
 
 export {
-  ActorSheetGnome
+    ActorSheetGnome
 }

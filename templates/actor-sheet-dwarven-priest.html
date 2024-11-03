@@ -5,19 +5,17 @@
            data-dtype="String"/>
     <input type="hidden" id="system.details.critRange" name="system.details.critRange" value="20" data-dtype="Number"/>
 
-    {{!-- Sheet Header --}}
-    {{> systems/dcc/templates/actor-partial-pc-header.html }}
-
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="character">{{localize "DCC.Character"}}</a>
-        <a class="item" data-tab="equipment">{{localize "DCC.Equipment"}}</a>
-        <a class="item" data-tab="class">{{localize "DwarvenPriest.DwarvenPriest"}}</a>
-        <a class="item" data-tab="spells">{{localize "DCC.Spells"}}</a>
+        <a data-tab="character" title="{{localize 'DCC.CharacterTabHint'}}">{{localize "DCC.Character"}}</a>
+        <a data-tab="equipment" title="{{localize 'DCC.EquipmentTabHint'}}">{{localize "DCC.Equipment"}}</a>
+        <a data-tab="dwarven-priest" title="{{localize 'DCC.ClassTabHint'}}">{{localize
+            "DwarvenPriest.DwarvenPriest"}}</a>
+        <a data-tab="spells" title="{{localize 'DCC.SpellsTabHint'}}">{{localize "DCC.Spells"}}</a>
         {{#if system.config.showSkills}}
-        <a class="item" data-tab="skills">{{localize "DCC.Skills"}}</a>
+        <a data-tab="skills" title="{{localize 'DCC.SkillsTabHint'}}">{{localize "DCC.Skills"}}</a>
         {{/if}}
-        <a class="item" data-tab="notes">{{localize "DCC.Notes"}}</a>
+        <a data-tab="notes" title="{{localize 'DCC.NotesTabHint'}}">{{localize "DCC.Notes"}}</a>
     </nav>
 
     {{!-- Sheet Body --}}
@@ -39,13 +37,12 @@
         {{> systems/dcc/templates/actor-partial-pc-notes.html }}
 
         {{!-- Class Tab --}}
-        <div class="tab" data-group="primary" data-tab="class">
+        <div class="tab" data-group="primary" data-tab="dwarven-priest">
             {{!-- Update spell check ability to use Personality --}}
             <input type="hidden" id="system.class.spellCheckAbility" name="system.class.spellCheckAbility" value="per">
-            <h4 class="class-label">{{localize "DwarvenPriest.DwarvenPriestAbilities"}}</h4>
-            <div class="class">
-                <div class="skills-container">
-                    <div class="split-50-50" data-ability="per">
+            <div class="class grid-container">
+                <div class="grid-col-span-12">
+                    <div class="grid-tpl-max-auto" data-ability="per">
                         <label class="spell-check rollable" for="system.class.spellCheck">{{localize
                             "DCC.SpellCheck"}}</label>
                         <input type="text" id="system.class.spellCheck" name="system.class.spellCheck"
@@ -53,7 +50,8 @@
                                data-dtype="String"/>
                     </div>
                     <div class="split-75-25">
-                        <label class="disapproval-range rollable" for="system.class.disapproval">{{localize "DCC.DisapprovalRange"}}</label>
+                        <label class="disapproval-range rollable" for="system.class.disapproval">{{localize
+                            "DCC.DisapprovalRange"}}</label>
                         <select class="number" name="system.class.disapproval" id="system.class.disapproval">
                             {{selectOptions config.disapprovalRanges selected=system.class.disapproval localize=true}}
                         </select>

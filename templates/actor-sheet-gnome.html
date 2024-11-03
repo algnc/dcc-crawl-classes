@@ -5,8 +5,6 @@
            data-dtype="String"/>
     <input type="hidden" id="system.details.critRange" name="system.details.critRange" value="20" data-dtype="Number"/>
 
-    {{!-- Sheet Header --}}
-    {{> systems/dcc/templates/actor-partial-pc-header.html }}
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
@@ -50,7 +48,7 @@
                                value="{{system.skills.trickDie.die}}" data-dtype="String"/>
                     </div>
                     <div class="split-50-50" data-ability="int">
-                        <label class="spell-check rollable" for="data.class.spellCheck">{{localize
+                        <label class="spell-check rollable" for="system.class.spellCheck">{{localize
                             "DCC.SpellCheck"}}</label>
                         <input type="text" id="system.class.spellCheck" name="system.class.spellCheck"
                                value="{{numberFormat system.class.spellCheck decimals=0 sign=true}}"
@@ -58,8 +56,8 @@
                     </div>
                     <div></div>
                     <div class="wide textarea">
-                        <label for="system.class.corruption">{{localize "DCC.Corruptions"}}:</label>
-                        <label></label>
+                        <label>{{localize "DCC.Corruptions"}}:</label>
+                        <br>
                         {{editor system.class.corruption target="system.class.corruption" button=true owner=owner
                         editable=editable}}
                     </div>

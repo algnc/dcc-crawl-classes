@@ -28,3 +28,7 @@ div.classTable {
 .divTableHeading { display: table-header-group;}
 .divTableFoot { display: table-footer-group;}
 .divTableBody { display: table-row-group;}
+
+a[data-tab='dwarven-priest']::before {
+  content: '\f3ed';
+}

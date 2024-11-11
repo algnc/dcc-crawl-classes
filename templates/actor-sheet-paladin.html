@@ -1,143 +1,173 @@
 <form class="{{cssClass}}" autocomplete="off">
 
-    {{!-- Hidden inputs to reflect the sheet class and force standard crit range --}}
-    <input type="hidden" id="system.details.sheetClass" name="system.details.sheetClass" value="Paladin"
-           data-dtype="String"/>
-    <input type="hidden" id="system.details.critRange" name="system.details.critRange" value="20" data-dtype="Number"/>
+  {{!-- Hidden inputs to reflect the sheet class and force standard crit range --}}
+  <input type="hidden" id="system.details.sheetClass" name="system.details.sheetClass" value="Paladin"
+         data-dtype="String"/>
+  <input type="hidden" id="system.details.critRange" name="system.details.critRange" value="20" data-dtype="Number"/>
 
-    {{!-- Sheet Header --}}
-    {{> systems/dcc/templates/actor-partial-pc-header.html }}
 
-    {{!-- Sheet Tab Navigation --}}
-    <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="character">{{localize "DCC.Character"}}</a>
-        <a class="item" data-tab="equipment">{{localize "DCC.Equipment"}}</a>
-        <a class="item" data-tab="class">{{localize "Paladin.Paladin"}}</a>
-        <a class="item" data-tab="spells">{{localize "DCC.Spells"}}</a>
-        {{#if system.config.showSkills}}
-        <a class="item" data-tab="skills">{{localize "DCC.Skills"}}</a>
-        {{/if}}
-        <a class="item" data-tab="notes">{{localize "DCC.Notes"}}</a>
-    </nav>
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a data-tab="character">{{localize "DCC.Character"}}</a>
+    <a data-tab="equipment">{{localize "DCC.Equipment"}}</a>
+    <a data-tab="paladin">{{localize "Paladin.Paladin"}}</a>
+    <a data-tab="spells">{{localize "DCC.Spells"}}</a>
+    {{#if system.config.showSkills}}
+    <a data-tab="skills">{{localize "DCC.Skills"}}</a>
+    {{/if}}
+    <a data-tab="notes">{{localize "DCC.Notes"}}</a>
+  </nav>
 
-    {{!-- Sheet Body --}}
-    <section class="sheet-body">
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
 
-        {{!-- Character Tab --}}
-        {{> systems/dcc/templates/actor-partial-pc-common.html }}
+    {{!-- Character Tab --}}
+    {{> systems/dcc/templates/actor-partial-pc-common.html }}
 
-        {{!-- Equipment Tab --}}
-        {{> systems/dcc/templates/actor-partial-pc-equipment.html }}
+    {{!-- Equipment Tab --}}
+    {{> systems/dcc/templates/actor-partial-pc-equipment.html }}
 
-        {{!-- Spells Tab --}}
-        {{> systems/dcc/templates/actor-partial-cleric-spells.html }}
+    {{!-- Spells Tab --}}
+    {{> systems/dcc/templates/actor-partial-cleric-spells.html }}
 
-        {{!-- Skills Tab --}}
-        {{> systems/dcc/templates/actor-partial-skills.html }}
+    {{!-- Skills Tab --}}
+    {{> systems/dcc/templates/actor-partial-skills.html }}
 
-        {{!-- Notes Tab --}}
-        {{> systems/dcc/templates/actor-partial-pc-notes.html }}
+    {{!-- Notes Tab --}}
+    {{> systems/dcc/templates/actor-partial-pc-notes.html }}
 
-        {{!-- Class Tab --}}
-        <div class="tab" data-group="primary" data-tab="class">
-            {{!-- Update spell check ability to use Personality --}}
-            <input type="hidden" id="system.class.spellCheckAbility" name="system.class.spellCheckAbility" value="per">
-            <h4 class="class-label">{{localize "Paladin.PaladinAbilities"}}</h4>
-            <div class="class">
-                <div class="skills-container">
-                    <div class="split-50-50" data-skill="smiteDie">
-                        <label class="skill-check rollable" for="system.skills.smiteDie.die">{{localize
-                            "Paladin.SmiteDie"}}</label>
-                        <input type="text" id="system.skills.smiteDie.die" name="system.skills.smiteDie.die"
-                               value="{{system.skills.smiteDie.die}}" data-dtype="String"/>
-                    </div>
-                    <div class="split-50-50" data-ability="per">
-                        <label class="spell-check rollable" for="system.class.spellCheck">{{localize
-                            "DCC.SpellCheck"}}</label>
-                        <input type="text" id="system.class.spellCheck" name="system.class.spellCheck"
-                               value="{{numberFormat system.class.spellCheck decimals=0 sign=true}}"
-                               data-dtype="String"/>
-                    </div>
-                    <div class="50-50" data-skill="holyDeeds">
-                        <label class="skill-check rollable" for="system.skills.holyDeeds.value">{{localize
-                            "Paladin.HolyDeedsText"}}</label>
-                        <input type="text" id="system.skills.holyDeeds.value" name="system.skills.holyDeeds.value"
-                               value="{{system.skills.holyDeeds.value}}" data-dtype="String"/>
-                    </div>
-                    <div></div>
-                    <ul class="class-note flexcol">
-                        <li>
-                            {{localize "Paladin.Smite"}}
-                            <ul>
-                                <li>{{localize "Paladin.SmiteDesc"}}</li>
-                            </ul>
-                        <li>
-                            {{localize "Paladin.HolyDeedsText"}}
-                        </li>
-                        <ul>
-                            <li>{{localize "Paladin.HolyDeedsTextDesc"}}</li>
-                            <ul>
-                                <li>{{localize "Paladin.LayOnHands"}}</li>
-                                <ul>
-                                    <li>{{localize "Paladin.LayOnHandsDesc"}}</li>
-                                </ul>
-                                <li>{{localize "Paladin.InstillBravery"}}</li>
-                                <ul>
-                                    <li>{{localize "Paladin.InstillBraveryDesc"}}</li>
-                                </ul>
-                                <li>{{localize "Paladin.CauseFear"}}</li>
-                                <ul>
-                                    <li>{{localize "Paladin.CauseFearDesc"}}</li>
-                                </ul>
-                                <li>{{localize "Paladin.Luck"}}</li>
-                            </ul>
-                        </ul>
-                    </ul>
-                </div>
-                <div class="lay-on-hands">
-                    <div class="lay-on-hands container">
-                        <div class="header top left item">Result</div>
-                        <div class="header top item">Same</div>
-                        <div class="header top item">Adjacent</div>
-                        <div class="header top item">Opposed</div>
-                        <div class="header left item">1-11</div>
-                        <div class="item">fail</div>
-                        <div class="item">fail</div>
-                        <div class="item">fail</div>
-                        <div class="header left item">12-13</div>
-                        <div class="item">1 dice</div>
-                        <div class="item">None</div>
-                        <div class="item">None</div>
-                        <div class="header left item">14-19</div>
-                        <div class="item">2 dice</div>
-                        <div class="item">1 dice</div>
-                        <div class="item">None</div>
-                        <div class="header left item">20-21</div>
-                        <div class="item">3 dice</div>
-                        <div class="item">2 dice</div>
-                        <div class="item">1 dice</div>
-                        <div class="header left item">22+</div>
-                        <div class="item">4 dice</div>
-                        <div class="item">3 dice</div>
-                        <div class="item">2 dice</div>
-                    </div>
-                    <div class="condition-healing container">
-                        <div class="header top left item">Condition</div>
-                        <div class="header top item">Dice</div>
-                        <div class="header left item">Broken Limbs</div>
-                        <div class="item">1</div>
-                        <div class="header left item">Organ Damage</div>
-                        <div class="item">2</div>
-                        <div class="header left item">Disease</div>
-                        <div class="item">2</div>
-                        <div class="header left item">Paralysis or Poison</div>
-                        <div class="item">3</div>
-                        <div class="header left item">Blindness or Deafness</div>
-                        <div class="item">4</div>
-                    </div>
-                </div>
+    {{!-- Class Tab --}}
+    <div class="tab" data-group="primary" data-tab="paladin">
+      <input type="hidden" id="system.class.spellCheckAbility" name="system.class.spellCheckAbility" value="per">
+      <div class="grid-container">
+        <div class="grid-col-span-12 dark-border">
+          <div class="dark-title">{{localize "Paladin.PaladinAbilities"}}</div>
+          <div class="grid-tpl-two grid-row-gap-8 p-5">
+            <div class="grid-tpl-max-25" data-skill="smiteDie">
+              <label class="skill-check rollable" for="system.skills.smiteDie.die">{{localize
+                "Paladin.SmiteDie"}}</label>
+              <input type="text" id="system.skills.smiteDie.die" name="system.skills.smiteDie.die"
+                     value="{{system.skills.smiteDie.die}}" data-dtype="String"/>
             </div>
+            <div class="grid-tpl-max-25" data-ability="per">
+              <label class="spell-check rollable" for="system.class.spellCheck">{{localize
+                "DCC.SpellCheck"}}</label>
+              <input type="text" id="system.class.spellCheck" name="system.class.spellCheck"
+                     value="{{numberFormat system.class.spellCheck decimals=0 sign=true}}"
+                     data-dtype="String"/>
+            </div>
+            <div class="grid-tpl-max-25" data-skill="holyDeeds">
+              <label class="skill-check rollable" for="system.skills.holyDeeds.value">{{localize
+                "Paladin.HolyDeedsText"}}</label>
+              <input type="text" id="system.skills.holyDeeds.value" name="system.skills.holyDeeds.value"
+                     value="{{system.skills.holyDeeds.value}}" data-dtype="String"/>
+            </div>
+            <ul class="class-note grid-col-span-2">
+              <li>
+                {{localize "Paladin.Smite"}}
+                <ul>
+                  <li>{{localize "Paladin.SmiteDesc"}}</li>
+                </ul>
+              <li>
+                {{localize "Paladin.HolyDeedsText"}}
+                <ul>
+                  <li>{{localize "Paladin.HolyDeedsTextDesc"}}
+                    <ul>
+                      <li>{{localize "Paladin.LayOnHands"}}
+                        <ul>
+                          <li>{{localize "Paladin.LayOnHandsDesc"}}</li>
+                        </ul>
+                      </li>
+                      <li>{{localize "Paladin.InstillBravery"}}
+                        <ul>
+                          <li>{{localize "Paladin.InstillBraveryDesc"}}</li>
+                        </ul>
+                      </li>
+                      <li>{{localize "Paladin.CauseFear"}}
+                        <ul>
+                          <li>{{localize "Paladin.CauseFearDesc"}}</li>
+                        </ul>
+                      </li>
+                      <li>{{localize "Paladin.Luck"}}</li>
+                    </ul>
+                </ul>
+            </ul>
+          </div>
         </div>
-    </section>
+        <div class="grid-col-span-12 cleric-table">
+          <table class="dark-border">
+            <thead class="dark-title">
+            <tr>
+              <th>Lay On Hands (alignment step)</th>
+              <th>12</th>
+              <th>14</th>
+              <th>20</th>
+              <th>22+</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>(same)</td>
+              <td>2 dice</td>
+              <td>3 dice</td>
+              <td>4 dice</td>
+              <td>5 dice</td>
+            </tr>
+            <tr>
+              <td>(adjacent)</td>
+              <td>1 die</td>
+              <td>2 dice</td>
+              <td>3 dice</td>
+              <td>4 dice</td>
+            </tr>
+            <tr>
+              <td>(opposed)</td>
+              <td>1 die</td>
+              <td>1 die</td>
+              <td>2 dice</td>
+              <td>3 dice</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid-col-span-12 cleric-table">
+          <table class="dark-border">
+            <thead class="dark-title">
+            <tr>
+              <th>Condition</th>
+              <th>Dice</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>Broken limbs</td>
+              <td>1 die</td>
+            </tr>
+            <tr>
+              <td>Organ damage</td>
+              <td>2 dice</td>
+            </tr>
+            <tr>
+              <td>Disease</td>
+              <td>2 dice</td>
+            </tr>
+            <tr>
+              <td>Paralysis</td>
+              <td>3 dice</td>
+            </tr>
+            <tr>
+              <td>Poison</td>
+              <td>4 dice</td>
+            </tr>
+            <tr>
+              <td>Blindness/Deafness</td>
+              <td>5 dice</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
 </form>
 

@@ -9,29 +9,31 @@ import DCCActorSheet from '/systems/dcc/module/actor-sheet.js'
  * @extends {DCCActorSheet}
  */
 class ActorSheetOrc extends DCCActorSheet {
-  /** @override */
-	async getData (options) {
-    const data = await super.getData(options)
-    this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-orc.html'
-	  if (data.system.details.sheetClass !== 'Orc') {
-      this.actor.update({
-        'system.class.className': game.i18n.localize('orc.Orc')
-      })
-    }
+    static height = 635
 
-	if (data.system.details.sheetClass !== 'Orc') {
-      this.actor.update({
-	'system.skills.rageDie': {
-	  label: 'Orc.rageDie',
-	  die: '1d3',
-	  value: '1'
-      }
-    })
+    /** @override */
+    async getData(options) {
+        const data = await super.getData(options)
+        this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-orc.html'
+        if (data.system.details.sheetClass !== 'Orc') {
+            this.actor.update({
+                'system.class.className': game.i18n.localize('orc.Orc')
+            })
+        }
+
+        if (data.system.details.sheetClass !== 'Orc') {
+            this.actor.update({
+                'system.skills.rageDie': {
+                    label: 'Orc.rageDie',
+                    die: '1d3',
+                    value: '1'
+                }
+            })
+        }
+        return data
     }
-    return data
-  }
 }
 
 export {
-  ActorSheetOrc
+    ActorSheetOrc
 }

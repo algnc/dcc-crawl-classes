@@ -9,19 +9,21 @@ import DCCActorSheet from '/systems/dcc/module/actor-sheet.js'
  * @extends {DCCActorSheet}
  */
 class ActorSheetHalflingBurglar extends DCCActorSheet {
-  /** @override */
-	async getData (options) {
-    const data = await super.getData(options)
-    this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-halfling-burglar.html'
-    if (data.system.details.sheetClass !== 'Halfling-Burglar') {
-      this.actor.update({
-        'system.class.className': game.i18n.localize('HalflingBurglar.HalflingBurglar')
-      })
+    static height = 635
+
+    /** @override */
+    async getData(options) {
+        const data = await super.getData(options)
+        this.options.template = 'modules/dcc-crawl-classes/templates/actor-sheet-halfling-burglar.html'
+        if (data.system.details.sheetClass !== 'Halfling-Burglar') {
+            this.actor.update({
+                'system.class.className': game.i18n.localize('HalflingBurglar.HalflingBurglar')
+            })
+        }
+        return data
     }
-    return data
-  }
 }
 
 export {
-  ActorSheetHalflingBurglar
+    ActorSheetHalflingBurglar
 }

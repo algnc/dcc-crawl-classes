@@ -1,75 +1,79 @@
 <form class="{{cssClass}}" autocomplete="off">
 
-    {{!-- Hidden inputs to reflect the sheet class and force standard crit range --}}
-    <input type="hidden" id="system.details.sheetClass" name="system.details.sheetClass" value="HalflingChampion"
-           data-dtype="String"/>
-    <input type="hidden" id="system.details.critRange" name="system.details.critRange" value="20" data-dtype="Number"/>
+  {{!-- Hidden inputs to reflect the sheet class and force standard crit range --}}
+  <input type="hidden" id="system.details.sheetClass" name="system.details.sheetClass" value="HalflingChampion"
+         data-dtype="String"/>
+  <input type="hidden" id="system.details.critRange" name="system.details.critRange" value="20" data-dtype="Number"/>
 
-    {{!-- Sheet Header --}}
-    {{> systems/dcc/templates/actor-partial-pc-header.html }}
 
-    {{!-- Sheet Tab Navigation --}}
-    <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="character">{{localize "DCC.Character"}}</a>
-        <a class="item" data-tab="equipment">{{localize "DCC.Equipment"}}</a>
-        <a class="item" data-tab="class">{{localize "HalflingChampion.HalflingChampion"}}</a>
-        {{#if system.config.showSpells}}
-        <a class="item" data-tab="spells">{{localize "DCC.Spells"}}</a>
-        {{/if}}
-        {{#if system.config.showSkills}}
-        <a class="item" data-tab="skills">{{localize "DCC.Skills"}}</a>
-        {{/if}}
-        <a class="item" data-tab="notes">{{localize "DCC.Notes"}}</a>
-    </nav>
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a data-tab="character">{{localize "DCC.Character"}}</a>
+    <a data-tab="equipment">{{localize "DCC.Equipment"}}</a>
+    <a data-tab="halfling-champion">{{localize "HalflingChampion.HalflingChampion"}}</a>
+    {{#if system.config.showSpells}}
+    <a data-tab="spells">{{localize "DCC.Spells"}}</a>
+    {{/if}}
+    {{#if system.config.showSkills}}
+    <a data-tab="skills">{{localize "DCC.Skills"}}</a>
+    {{/if}}
+    <a data-tab="notes">{{localize "DCC.Notes"}}</a>
+  </nav>
 
-    {{!-- Sheet Body --}}
-    <section class="sheet-body">
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
 
-        {{!-- Character Tab --}}
-        {{> systems/dcc/templates/actor-partial-pc-common.html }}
+    {{!-- Character Tab --}}
+    {{> systems/dcc/templates/actor-partial-pc-common.html }}
 
-        {{!-- Equipment Tab --}}
-        {{> systems/dcc/templates/actor-partial-pc-equipment.html }}
+    {{!-- Equipment Tab --}}
+    {{> systems/dcc/templates/actor-partial-pc-equipment.html }}
 
-        {{!-- Spells Tab --}}
-        {{> systems/dcc/templates/actor-partial-cleric-spells.html }}
+    {{!-- Spells Tab --}}
+    {{> systems/dcc/templates/actor-partial-cleric-spells.html }}
 
-        {{!-- Skills Tab --}}
-        {{> systems/dcc/templates/actor-partial-skills.html }}
+    {{!-- Skills Tab --}}
+    {{> systems/dcc/templates/actor-partial-skills.html }}
 
-        {{!-- Notes Tab --}}
-        {{> systems/dcc/templates/actor-partial-pc-notes.html }}
+    {{!-- Notes Tab --}}
+    {{> systems/dcc/templates/actor-partial-pc-notes.html }}
 
-        {{!-- Class Tab --}}
-        <div class="tab" data-group="primary" data-tab="class">
-            <h4 class="class-label">{{localize "HalflingChampion.HalflingChampionAbilities"}}</h4>
-            <div class="class">
-                <ul class="class-note flexcol">
-                    {{#dccPackExists "dcc-core-book.dcc-core-journals"}}
-                    <li>{{{localize "DCC.HalflingClassLink"}}}</li>
-                    {{/dccPackExists}}
-                    <li>{{localize "DCC.InfravisionHalfling"}}</li>
-                    <li>{{localize "HalflingChampion.InspirationalLuck"}}</li>
-                    <li>{{localize "DCC.TwoWeaponFighting"}}
-                        <ul class="class-note flexcol">
-                            <li>{{localize "DCC.HalflingTwoWeaponActionDie"}}</li>
-                            <li>{{localize "DCC.HalflingTwoWeaponCrit"}}</li>
-                            <li>{{localize "DCC.HalflingTwoWeaponFumble"}}</li>
-                            <li>{{localize "DCC.HalflingTwoWeaponHighAg"}}</li>
-                        </ul>
-                    </li>
-                    <li>{{localize "DCC.MightyDeedsOfArms"}}</li>
-                    <ul class="class-note flexcol">
-                        {{#dccPackExists "dcc-core-book.dcc-core-journals"}}
-                        <li>{{{localize "DCC.MightyDeedsLink"}}}</li>
-                        {{/dccPackExists}}
-                        <li><a href="https://github.com/foundryvtt-dcc/dcc/wiki/Mighty-Deeds">{{{localize
-                            "DCC.MightyDeedsHowToLink"}}}</a>
-                        </li>
-                    </ul>
-                </ul>
-            </div>
+    {{!-- Class Tab --}}
+    <div class="tab" data-group="primary" data-tab="halfling-champion">
+      <div class="grid-container">
+        <div class="grid-col-span-12 dark-border">
+          <div class="dark-title">{{localize "HalflingChampion.HalflingChampionAbilities"}}</div>
+          <ul class="class-note flexcol">
+            {{#dccPackExists "dcc-core-book.dcc-core-journals"}}
+            <li>{{{localize "DCC.HalflingClassLink"}}}</li>
+            {{/dccPackExists}}
+            <li>{{localize "DCC.InfravisionHalfling"}}</li>
+            <li>{{localize "HalflingChampion.InspirationalLuck"}}</li>
+            <li>{{localize "DCC.TwoWeaponFighting"}}
+              <ul class="class-note flexcol">
+                <li>{{localize "DCC.HalflingTwoWeaponActionDie"}}</li>
+                <li>{{localize "DCC.HalflingTwoWeaponCrit"}}</li>
+                <li>{{localize "DCC.HalflingTwoWeaponFumble"}}</li>
+                <li>{{localize "DCC.HalflingTwoWeaponHighAg"}}</li>
+              </ul>
+            </li>
+            <li>{{localize "DCC.MightyDeedsOfArms"}}
+              <ul class="class-note flexcol">
+                {{#dccPackExists "dcc-core-book.dcc-core-journals"}}
+                <li>{{{localize "DCC.MightyDeedsLink"}}}</li>
+                {{/dccPackExists}}
+                <li>
+                  <a class="external-link"
+                     href="https://github.com/foundryvtt-dcc/dcc/wiki/Mighty-Deeds">
+                    <i class="fas fa-link"></i> {{localize "DCC.MightyDeedsHowToLink"}}
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 </form>
 

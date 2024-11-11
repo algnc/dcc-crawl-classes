@@ -3,28 +3,94 @@ div.classTable {
   text-align: left;
   border-collapse: collapse;
 }
+
 .divTable.classTable .divTableCell, .divTable.classTable .divTableHead {
   border: 1px solid #AAAAAA;
   padding: 3px 2px;
 }
+
 .divTable.classTable .divTableRow:nth-child(even) {
   background: #f2e8d5;
 }
+
 .divTable.classTable .divTableHeading {
-    border-bottom: 2px solid #444444;
+  border-bottom: 2px solid #444444;
 }
+
 .divTable.classTable .divTableHeading .divTableHead {
   font-weight: bold;
   color: #000000;
   text-align: center;
 }
+
 .classTable .tableFootStyle {
   font-weight: bold;
 }
-.divTable{ display: table; }
-.divTableRow { display: table-row; }
-.divTableHeading { display: table-header-group;}
-.divTableCell, .divTableHead { display: table-cell;}
-.divTableHeading { display: table-header-group;}
-.divTableFoot { display: table-footer-group;}
-.divTableBody { display: table-row-group;}
+
+.divTable {
+  display: table;
+}
+
+.divTableRow {
+  display: table-row;
+}
+
+.divTableHeading {
+  display: table-header-group;
+}
+
+.divTableCell, .divTableHead {
+  display: table-cell;
+}
+
+.divTableHeading {
+  display: table-header-group;
+}
+
+.divTableFoot {
+  display: table-footer-group;
+}
+
+.divTableBody {
+  display: table-row-group;
+}
+
+.short-editor .editor {
+  min-height: 180px;
+}
+
+a[data-tab='bard']::before {
+  content: '\f3ed';
+}
+
+a[data-tab='dwarven-priest']::before {
+  content: '\f3ed';
+}
+
+a[data-tab='elven-rogue']::before {
+  content: '\f3ed';
+}
+
+a[data-tab='gnome']::before {
+  content: '\f3ed';
+}
+
+a[data-tab='halfling-burglar']::before {
+  content: '\f3ed';
+}
+
+a[data-tab='halfling-champion']::before {
+  content: '\f3ed';
+}
+
+a[data-tab='orc']::before {
+  content: '\f3ed';
+}
+
+a[data-tab='paladin']::before {
+  content: '\f3ed';
+}
+
+a[data-tab='ranger']::before {
+  content: '\f3ed';
+}
